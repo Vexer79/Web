@@ -4,9 +4,9 @@ body {
     font-family: 'Arial';
 }
 
-.d-flex{
+.d-flex {
     display: flex;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
 }
 
 .row {
