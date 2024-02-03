@@ -28,16 +28,55 @@ body {
 .border {
     border: solid;
 }
-.border-bottom{
+
+.border-bottom {
     border-bottom: solid;
 }
-.border-left{
+
+.border-left {
     border-left: solid;
 }
 
-.border-1{
+.border-1 {
     border-width: 10%;
 }
+
+.fs-1 {
+    font-size: 49px;
+}
+
+.fs-2 {
+    font-size: 42px;
+}
+
+.fs-3 {
+    font-size: 35px;
+}
+
+.fs-4 {
+    font-size: 28px;
+}
+
+.fs-5 {
+    font-size: 21px;
+}
+
+.fs-6 {
+    font-size: 16px;
+}
+
+.fw-bold {
+    font-weight: 700;
+}
+
+.lh-base {
+    line-height: 150%;
+}
+
+.text-center {
+    text-align: center;
+}
+
 
 /*desktop*/
 @media (min-width: 993px) {
