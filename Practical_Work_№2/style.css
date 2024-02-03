@@ -1,5 +1,9 @@
 @import url(reset-style.css);
 
+body {
+    font-family: 'Arial';
+}
+
 /*desktop*/
 @media (min-width: 993px) {
 }
