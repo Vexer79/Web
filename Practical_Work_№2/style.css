@@ -8,6 +8,10 @@ body {
     width: 100%;
 }
 
+.col{
+    flex-direction: column;
+}
+
 /*desktop*/
 @media (min-width: 993px) {
 }
