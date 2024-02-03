@@ -1,1 +1,13 @@
 @import url(reset-style.css);
+
+/*desktop*/
+@media (min-width: 993px) {
+}
+
+/*tablet*/
+@media (min-width: 769px) and (max-width: 992px) {
+}
+
+/*mobile*/
+@media (max-width: 768px) {
+}
