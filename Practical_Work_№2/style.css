@@ -78,7 +78,7 @@ body {
 }
 
 .margin {
-    margin-top: 5vw;
+    margin-top: 5.3vw;
 }
 
 .mt {
@@ -137,6 +137,10 @@ body {
 
     .col-lg-12 {
         width: 100%;
+    }
+
+    .margin {
+        margin-top: 2vw;
     }
 }
 
