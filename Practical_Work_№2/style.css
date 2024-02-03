@@ -25,6 +25,20 @@ body {
     flex-direction: column;
 }
 
+.border {
+    border: solid;
+}
+.border-bottom{
+    border-bottom: solid;
+}
+.border-left{
+    border-left: solid;
+}
+
+.border-1{
+    border-width: 10%;
+}
+
 /*desktop*/
 @media (min-width: 993px) {
     .col-lg-1 {
