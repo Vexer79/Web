@@ -93,6 +93,22 @@ body {
     padding: 0.25rem 1rem;
 }
 
+.bgc-light-green {
+    background-color: #D5E8D4;
+}
+
+.bgc-orange {
+    background-color: #F0A30A;
+}
+
+.bgc-red {
+    background-color: #D80073;
+}
+
+.bgc-light-grayish-red {
+    background-color: #FAD9D5;
+}
+
 /*desktop*/
 @media (min-width: 993px) {
     .col-lg-1 {
