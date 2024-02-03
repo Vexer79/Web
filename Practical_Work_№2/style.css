@@ -4,6 +4,10 @@ body {
     font-family: 'Arial';
 }
 
+.row {
+    width: 100%;
+}
+
 /*desktop*/
 @media (min-width: 993px) {
 }
