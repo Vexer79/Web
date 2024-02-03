@@ -77,6 +77,10 @@ body {
     text-align: center;
 }
 
+.color-white {
+    color: white;
+}
+
 .margin {
     margin-top: 5.3vw;
 }
