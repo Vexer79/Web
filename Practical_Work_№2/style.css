@@ -4,6 +4,11 @@ body {
     font-family: 'Arial';
 }
 
+.d-flex{
+    display: flex;
+    flex-wrap:wrap;
+}
+
 .row {
     width: 100%;
 }
