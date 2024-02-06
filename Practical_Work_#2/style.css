@@ -93,6 +93,10 @@ body {
     padding: 0.35rem 1.3rem;
 }
 
+.text-padding {
+    padding: 1.25rem;
+}
+
 .bgc-light-green {
     background-color: #D5E8D4;
 }
