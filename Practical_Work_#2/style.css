@@ -217,10 +217,6 @@ body {
     .col-md-12 {
         width: 100%;
     }
-
-    .flex-grow {
-        flex-grow: 0.333;
-    }
 }
 
 /*mobile*/
