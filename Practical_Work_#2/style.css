@@ -85,6 +85,7 @@ body {
     margin-top: 25px;
 }
 
+.row-padding,
 .container-padding {
     padding: 2.5%;
 }
@@ -263,5 +264,9 @@ body {
 
     .col-sm-12 {
         width: 100%;
+    }
+
+    .row-padding{
+        padding: 5%;
     }
 }
