@@ -89,6 +89,10 @@ body {
     margin-top: 25px;
 }
 
+.container-padding {
+    padding: 2.5%;
+}
+
 .caption-padding {
     padding: 0.35rem 1.3rem;
 }
