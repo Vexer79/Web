@@ -23,12 +23,19 @@ h1 {
     grid-template: repeat(2, 1fr);
 }
 
+.box > div > p {
+    padding: 4%;
+    line-height: 1.65;
+    font-size: 1.15em;
+}
+
 .caption-1 {
     background-color: #F0A30A;
 }
 
 .caption-2 {
     background-color: #D80073;
+    color: white;
 }
 
 .caption-3 {
@@ -41,4 +48,7 @@ h1 {
     border-bottom: solid 3px black;
     border-left: solid 3px black;
     justify-self: end;
+    padding: 7px 15px;
+    font-size: 1.45em;
+    font-weight: 700;
 }
