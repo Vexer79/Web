@@ -12,10 +12,48 @@ h1 {
     padding-bottom: 1%;
 }
 
-.wrapper {
+/* first method */
+
+/* .wrapper {
     display: grid;
     grid-template: 1fr / repeat(3, 1fr);
+    gap: 5%;
+    padding: 0 5%;
+} */
+
+/* second method */
+
+/* .wrapper {
+    display: grid;
+    grid-template: 1fr / repeat(3, 1fr);
+    padding: 0 3%;
 }
+
+.box {
+    padding: 0 10%;
+} */
+
+
+/* third method */
+
+/* .box:first-child {
+    grid-area: a;
+}
+
+.box:nth-child(2) {
+    grid-area: b;
+}
+
+.box:last-child {
+    grid-area: c;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-areas: "a c b";
+    column-gap: 5%;
+    padding: 0 4.5%;
+} */
 
 .box > div {
     background-color: #D5E8D4;
