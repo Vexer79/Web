@@ -10,3 +10,8 @@ h1 {
     font-weight: 700;
     font-size: 28px;
 }
+
+.box {
+    background-color: #D5E8D4;
+    border: solid 3px black;
+}
