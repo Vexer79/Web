@@ -11,6 +11,11 @@ h1 {
     font-size: 28px;
 }
 
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
 .box {
     background-color: #D5E8D4;
     border: solid 3px black;
@@ -28,7 +33,9 @@ h1 {
     background-color: #FAD9D5;
 }
 
-.caption-1, .caption-2, .caption-3{
+.caption-1,
+.caption-2,
+.caption-3 {
     border-bottom: solid 3px black;
     border-left: solid 3px black;
 }
