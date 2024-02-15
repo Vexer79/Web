@@ -1,1 +1,5 @@
 @import url(../Practical_Work_2/reset-style.css);
+
+body {
+    font-family: 'Arial';
+}
