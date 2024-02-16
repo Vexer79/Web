@@ -55,7 +55,7 @@ h1 {
 
 
 /* third method */
-.box:first-child {
+/* .box:first-child {
     grid-area: a;
 }
 
@@ -89,7 +89,7 @@ h1 {
         "c"
         "b";
     }
-}
+} */
 
 .box>div {
     background-color: #D5E8D4;
