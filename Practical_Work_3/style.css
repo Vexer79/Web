@@ -69,14 +69,12 @@ h1 {
 
 @media (min-width: 993px) {
     .wrapper {
-        display: grid;
         grid-template-areas: "a c b";
     }
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
     .wrapper{
-        display: grid;
         grid-template-areas: "a c"
         "b b";
     }
@@ -84,7 +82,6 @@ h1 {
 
 @media (max-width: 768px) {
     .wrapper{
-        display: grid;
         grid-template-areas: "a"
         "c"
         "b";
