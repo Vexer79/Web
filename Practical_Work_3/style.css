@@ -35,6 +35,24 @@ h1 {
     }
 } */
 
+/* second method */
+@media (min-width: 993px) {
+    .wrapper {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+    .wrapper {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .wrapper>div:last-child {
+        grid-column: span 2;
+    }
+}
+
 .box>div {
     background-color: #D5E8D4;
     border: solid 3px black;
