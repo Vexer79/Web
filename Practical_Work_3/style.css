@@ -14,7 +14,7 @@ h1 {
 
 .wrapper {
     display: grid;
-    /*можна тільки через padding*/
+    /*можна також тільки через padding*/
     gap: 3em;
     padding: 0 5%;
 }
