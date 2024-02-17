@@ -14,6 +14,7 @@ h1 {
 
 .wrapper {
     display: grid;
+    /*можна тільки через padding*/
     gap: 3em;
     padding: 0 5%;
 }
@@ -88,7 +89,7 @@ h1 {
 } */
 
 /* fourth method*/
-@media (min-width: 993px) {
+/* @media (min-width: 993px) {
     .wrapper>div:first-child {
         grid-column: 1 / 2;
     }
@@ -106,7 +107,7 @@ h1 {
     .wrapper>div:last-child {
         grid-column: 3 / -1;
     }
-}
+} */
 
 .box>div {
     background-color: #D5E8D4;
