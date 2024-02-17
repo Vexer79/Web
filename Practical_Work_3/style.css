@@ -88,6 +88,27 @@ h1 {
     }
 } */
 
+/* fourth method*/
+@media (min-width: 993px) {
+    .wrapper>div:first-child {
+        grid-column: 1 / 2;
+    }
+
+    .wrapper>div:nth-child(2) {
+        grid-column: 2 / 3;
+    }
+
+    .wrapper>div:last-child {
+        grid-column: 3 / 4;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+    .wrapper>div:last-child {
+        grid-column: 3 / -1;
+    }
+}
+
 .box>div {
     background-color: #D5E8D4;
     border: solid 3px black;
