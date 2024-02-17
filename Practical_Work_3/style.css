@@ -45,7 +45,6 @@ h1 {
 @media (min-width: 769px) and (max-width: 992px) {
     .wrapper {
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
     }
 
     .wrapper>div:last-child {
