@@ -12,3 +12,7 @@ function MyMathPowerDefault1(b, n) {
     n = n || 3;
     return MyMathPower(b, n);
 }
+
+function MyMathPowerDefault2(b = 2, n = 3){
+    return MyMathPower(b, n);
+}
