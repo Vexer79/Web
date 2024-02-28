@@ -36,6 +36,13 @@ function Truck(){
     this.avgSpeed = 60;
     this.brand = "Kamaz";
     this.model = "deadMoskal";
+    this.trip = function(){
+        if(this.driver === undefined){
+            console.log("No driver assigned");
+        }else{
+            console.log(`Driver ${this.driver.name}, ${(this.driver.nightDriving) ? "drives at night" : "does not drive at night"} and has ${this.driver.experience} years of experience.`);
+        }
+    };
 }
 
 Truck.prototype.AssignDriver = function (){
@@ -48,3 +55,4 @@ Truck.prototype.AssignDriver = function (){
 let truck = new Truck();
 truck.AssignDriver();
 console.log(truck);
+truck.trip();
