@@ -30,12 +30,12 @@ car2.drive = function () {
 }
 car2.drive();
 
-function Truck() {
-    this.color = "white";
-    this.weight = 2500;
-    this.avgSpeed = 60;
-    this.brand = "Kamaz";
-    this.model = "deadMoskal";
+function Truck(color, weight, avgSpeed, brand, model) {
+    this.color = color;
+    this.weight = weight;
+    this.avgSpeed = avgSpeed;
+    this.brand = brand;
+    this.model = model;
     this.trip = function () {
         if (this.driver === undefined) {
             console.log("No driver assigned");
@@ -45,14 +45,24 @@ function Truck() {
     };
 }
 
-Truck.prototype.AssignDriver = function () {
+Truck.prototype.AssignDriver = function (name, nightDriving, experience) {
     this.driver = new Object();
-    this.driver.name = "Рокицький Іван Ігорович";
-    this.driver.nightDriving = true;
-    this.driver.experience = 3;
+    this.driver.name = name;
+    this.driver.nightDriving = nightDriving;
+    this.driver.experience = experience;
 }
 
-let truck = new Truck();
-truck.AssignDriver();
-console.log(truck);
-truck.trip();
+let firstTruck = new Truck("white", 2500, 120, "Land Rover", "ForceTysa");
+let secondTruck = new Truck("black", 3000, 60, "KAMAZ", "Chmonya");
+
+firstTruck.trip();
+secondTruck.trip();
+
+firstTruck.AssignDriver("Afele", true, 3); // тут мало бути моє ім'я, але щось пішло не так... ¯\_(ツ)_/¯
+secondTruck.AssignDriver("Putin", false, 1);
+
+console.log(firstTruck);
+console.log(secondTruck);
+
+firstTruck.trip();
+secondTruck.trip();
