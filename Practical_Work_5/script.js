@@ -38,4 +38,13 @@ function Truck(){
     this.model = "deadMoskal";
 }
 
-console.log(new Truck("white", 2500, 60, "Kamaz", "deadMoskal"));
+Truck.prototype.AssignDriver = function (){
+    this.driver = new Object();
+    this.driver.name = "Рокицький Іван Ігорович";
+    this.driver.nightDriving = true;
+    this.driver.experience = 3;
+}
+
+let truck = new Truck();
+truck.AssignDriver();
+console.log(truck);
