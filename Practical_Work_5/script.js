@@ -30,3 +30,12 @@ car2.drive = function() {
 }
 car2.drive();
 
+function Truck(color, weight, avgSpeed, brand, model){
+    this.color = color;
+    this.weight = weight;
+    this.avgSpeed = avgSpeed;
+    this.brand = brand;
+    this.model = model;
+}
+
+console.log(new Truck("white", 2500, 60, "Kamaz", "deadMoskal"));
