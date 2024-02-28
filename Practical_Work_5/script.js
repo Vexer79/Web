@@ -20,32 +20,32 @@ car2.driver.name = "Rokytskyi Ivan";
 car2.driver.category = "B";
 car2.driver["personal limitations"] = null;
 
-car1.drive = function() {
+car1.drive = function () {
     console.log("I am not driving at night");
 }
 car1.drive();
 
-car2.drive = function() {
+car2.drive = function () {
     console.log("I can drive anytime");
 }
 car2.drive();
 
-function Truck(){
+function Truck() {
     this.color = "white";
     this.weight = 2500;
     this.avgSpeed = 60;
     this.brand = "Kamaz";
     this.model = "deadMoskal";
-    this.trip = function(){
-        if(this.driver === undefined){
+    this.trip = function () {
+        if (this.driver === undefined) {
             console.log("No driver assigned");
-        }else{
+        } else {
             console.log(`Driver ${this.driver.name}, ${(this.driver.nightDriving) ? "drives at night" : "does not drive at night"} and has ${this.driver.experience} years of experience.`);
         }
     };
 }
 
-Truck.prototype.AssignDriver = function (){
+Truck.prototype.AssignDriver = function () {
     this.driver = new Object();
     this.driver.name = "Рокицький Іван Ігорович";
     this.driver.nightDriving = true;
