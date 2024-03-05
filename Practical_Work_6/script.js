@@ -16,24 +16,28 @@ class Square {
 - Співпадаючі Катети: У квадрата катети (сторони, які утворюють прямий кут) також є рівні між собою.`);
     }
     length() {
-        console.log(this.a * 4);
+        let result = this.a * 4;
+        console.log(result);
+        return result;
     }
 
     square() {
-        console.log(this.a ** 2);
+        let result = this.a ** 2;
+        console.log(result);
+        return result;
     }
 
     info() {
         console.log(`- довжини всіх 4 сторін = ${this.a};
-        - величини всіх 4 кутів = 90°;
-        - суму довжин сторін = ${length()};
-        - площу ${square()}.`);
+- величини всіх 4 кутів = 90°;
+- суму довжин сторін = ${this.length()};
+- площу ${this.square()}.`);
     }
 }
 
 class Rectangle extends Square {
     constructor(a, b) {
-        this.a = a;
+        super(a);
         this.b = b;
     }
 
@@ -49,7 +53,7 @@ class Rectangle extends Square {
         this.a = a;
     }
 
-    set setB(a) {
+    set setB(b) {
         this.b = b;
     }
 
@@ -65,24 +69,28 @@ class Rectangle extends Square {
 - Діагоналі: Прямокутник має дві діагоналі, які є відрізками, що з'єднують протилежні вершини. Діагоналі прямокутника мають однакову довжину і ділять його на дві рівні прямокутні трикутники.`);
     }
     length() {
-        console.log(this.a * 2 + this.b * 2);
+        let result = this.a * 2 + this.b * 2;
+        console.log(result);
+        return result;
     }
 
     square() {
-        console.log(this.a * this.b);
+        let result = this.a * this.b;
+        console.log(result);
+        return result;
     }
 
     info() {
         console.log(`- довжини перших 2 сторін = ${this.a}, інших 2 сторін = ${this.b};
-        - величини всіх 4 кутів = 90°;
-        - суму довжин сторін = ${length()};
-        - площу ${square()}.`);
+- величини всіх 4 кутів = 90°;
+- суму довжин сторін = ${this.length()};
+- площу ${this.square()}.`);
     }
 }
 
 class Rhombus extends Square {
     constructor(a, alpha, beta) {
-        this.a = a;
+        super(a);
         this.alpha = alpha;
         this.beta = beta;
     }
@@ -99,27 +107,29 @@ class Rhombus extends Square {
 - Рівність відстаней: Відстані від будь-якої точки ромба до його двох протилежних сторін рівні.`);
     }
     length() {
-        console.log(this.a * 4);
+        let result = this.a * 4;
+        console.log(result);
+        return result;
     }
 
     square() {
-        console.log((this.a ** 2) * Math.sin(this.beta));
+        let result = (this.a ** 2) * Math.sin(this.alpha);
+        console.log(result);
+        return result;
     }
 
     info() {
         console.log(`- довжини всіх 4 сторін = ${this.a};
-        - величини 2 тупих кутів = ${this.alpha}, гострих = ${this.beta};
-        - суму довжин сторін = ${length()};
-        - площу ${square()}.`);
+- величини 2 тупих кутів = ${this.alpha}, гострих = ${this.beta};
+- суму довжин сторін = ${this.length()};
+- площу ${this.square()}.`);
     }
 }
 
 class Parallelogram extends Rhombus {
     constructor(a, b, alpha, beta) {
-        this.a = a;
+        super(a, alpha, beta);
         this.b = b;
-        this.alpha = alpha;
-        this.beta = beta;
     }
 
     static help() {
@@ -135,17 +145,40 @@ class Parallelogram extends Rhombus {
 - Діагоналі: Діагоналі паралелограма - це відрізки, які з'єднують протилежні вершини. Діагоналі розділяють паралелограм на два рівні трикутники, і вони відноситься одна до одної як діагоналі ромба. Одна діагональ ділить паралелограм на два рівні паралелограми.`);
     }
     length() {
-        console.log(this.a * 2 + this.b * 2);
+        let result = this.a * 2 + this.b * 2;
+        console.log(result);
+        return result;
     }
 
     square() {
-        console.log(this.a * this.b * Math.sin(this.beta));
+        let result = this.a * this.b * Math.sin(this.alpha);
+        console.log(result);
+        return result;
     }
 
     info() {
         console.log(`- довжини перших 2 сторін = ${this.a}, інших 2 сторін = ${this.b};
-        - величини 2 тупих кутів = ${this.alpha}, гострих = ${this.beta};
-        - суму довжин сторін = ${length()};
-        - площу ${square()}.`);
+- величини 2 тупих кутів = ${this.alpha}, гострих = ${this.beta};
+- суму довжин сторін = ${this.length()};
+- площу ${this.square()}.`);
     }
 }
+
+Square.help();
+Rectangle.help();
+Rhombus.help();
+Parallelogram.help();
+
+let square = new Square(5);
+let rectangle = new Rectangle(5, 6);
+console.log(rectangle.getA);
+console.log(rectangle.getB);
+console.log(rectangle.setA = 6);
+console.log(rectangle.setB = 5);
+let rhombus = new Rhombus(5, 120, 60);
+let parallelogram = new Parallelogram(5, 6, 120, 60);
+
+square.info();
+rectangle.info();
+rhombus.info();
+parallelogram.info();
