@@ -21,8 +21,8 @@ console.log(PiMultipliedBy2To3());
 console.log(PiDividedBy2());
 
 function Painter(color) {
+    console.log("Sieg Heil!");
     return function (obj) {
-        console.log("Sieg Heil!");
         console.log(`Color - ${color} and ${(obj.type === undefined) ? "No 'type' property occurred!" : "type: " + obj.type}`);
     };
 }
