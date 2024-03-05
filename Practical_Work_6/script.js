@@ -22,4 +22,11 @@ class Square {
     square() {
         console.log(this.a ** 2);
     }
+
+    info() {
+        console.log(`- довжини всіх 4 сторін = ${this.a};
+        - величини всіх 4 кутів = 90°;
+        - суму довжин сторін = ${this.a * 4};
+        - площу ${this.a**2}.`);
+    }
 }
