@@ -1,5 +1,5 @@
 class Square {
-    constructor(a){
+    constructor(a) {
         this.a = a;
     }
 
@@ -17,5 +17,9 @@ class Square {
     }
     length() {
         console.log(this.a * 4);
+    }
+
+    square() {
+        console.log(this.a ** 2);
     }
 }
