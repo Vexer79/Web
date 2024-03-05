@@ -1,3 +1,5 @@
 class Square {
-    a = 5;
+    constructor(a){
+        this.a = a;
+    }
 }
