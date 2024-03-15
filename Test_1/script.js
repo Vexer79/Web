@@ -52,7 +52,7 @@ class SimpleEllipse extends SimpleCircle {
 let simpleCircle = new SimpleCircle(5);
 console.log(simpleCircle);
 let simpleEllipse = new SimpleEllipse(5, 10);
-console.log(simpleCircle);
+console.log(simpleEllipse);
 console.log(simpleEllipse.square());
 
 function SubGenerator(a) {
