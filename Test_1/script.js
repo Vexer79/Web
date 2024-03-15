@@ -54,3 +54,15 @@ console.log(simpleCircle);
 let simpleEllipse = new SimpleEllipse(5, 10);
 console.log(simpleCircle);
 console.log(simpleEllipse.square());
+
+function SubGenerator(a) {
+    return function (b) {
+        return a - b;
+    }
+}
+
+let subFiveGenerator = SubGenerator(5);
+console.log(subFiveGenerator(3));
+
+let subThreeGenerator = SubGenerator(3);
+console.log(subThreeGenerator(1));
