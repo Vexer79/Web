@@ -6,20 +6,51 @@ function TriangleArea(a = 7, h_a = 3) {
 TriangleArea(3, 6);
 TriangleArea();
 
-function Jet() {
-    this.color = "orange";
-    this.avgSpeed = 320;
-    this["max tonnage"] = 20;
-    this.brand = "AirBus";
-    this["country of registration"] = "Poland";
+function Jet(color, avgSpeed, maxTonnage, brand, countryOfRegistration) {
+    this.color = color;
+    this.avgSpeed = avgSpeed;
+    this["max tonnage"] = maxTonnage;
+    this.brand = brand;
+    this["country of registration"] = countryOfRegistration;
 }
 
-Jet.prototype.AssignCaptain = function () {
-    this.name = "Ivan Rokytskyi";
-    this["years of experience"] = 4;
-    this.hasFamily = true;
+Jet.prototype.AssignCaptain = function (name, yearsOfExperience, hasFamily) {
+    this.name = name;
+    this["years of experience"] = yearsOfExperience;
+    this.hasFamily = hasFamily;
 }
-let jet = new Jet();
+let jet = new Jet("orange", 320, 20, "AirBus", "Poland");
 console.log(jet);
-jet.AssignCaptain();
+jet.AssignCaptain("Ivan Rokytskyi", 4, true);
 console.log(jet);
+
+class SimpleCircle {
+    constructor(majorRadius) {
+        this.majorRadius = majorRadius;
+    }
+
+    set setMajorRadius(majorRadius) {
+        this.majorRadius = majorRadius;
+    }
+}
+
+class SimpleEllipse extends SimpleCircle {
+    constructor(majorRadius, minorRadius) {
+        super(majorRadius);
+        this.minorRadius = minorRadius;
+    }
+
+    static square(majorRadius, minorRadius) {
+        return Math.PI * majorRadius * minorRadius;
+    }
+
+    square() {
+        return Math.PI * this.majorRadius * this.minorRadius;
+    }
+}
+
+let simpleCircle = new SimpleCircle(5);
+console.log(simpleCircle);
+let simpleEllipse = new SimpleEllipse(5, 10);
+console.log(simpleCircle);
+console.log(simpleEllipse.square());
