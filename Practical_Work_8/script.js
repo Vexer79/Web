@@ -8,4 +8,12 @@
             speakGoodBye.speak(name);
         }
     }
+
+    for (let name of names) {
+        if (name.charCodeAt(name.length - 1) === 110) {
+            speakHello.speak(name);
+        } else {
+            speakGoodBye.speak(name);
+        }
+    }
 })();
