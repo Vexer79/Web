@@ -1,5 +1,10 @@
-var speakWord = "Hello";
+(function (window) {
+    let speakHello = {};
+    var speakWord = "Hello";
 
-function speak(name) {
-  console.log(speakWord + " " + name);
-}
+    speakHello.speak = function (name) {
+        console.log(speakWord + " " + name);
+    }
+    
+    window.speakHello = speakHello;
+})(window);
