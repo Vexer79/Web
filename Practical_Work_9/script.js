@@ -76,3 +76,6 @@ for(const key in arr1[5]){
 for (const elem of arr1) {
     console.log(elem);
 }
+
+//1.2.20
+arr1.version = "1.0.0";
