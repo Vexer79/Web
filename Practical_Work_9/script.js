@@ -14,3 +14,6 @@ const arr1 = [
     -6,
     14,
 ];
+
+//1.2.4
+arr1.forEach(value => {console.log(value);});
