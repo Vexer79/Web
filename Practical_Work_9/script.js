@@ -33,3 +33,6 @@ const arr2 = arr1.slice(6, 8);
 arr2.forEach((elem) => {
     console.log(elem);
 });
+
+//1.2.9
+const arr3 = arr1.slice(0,3);
