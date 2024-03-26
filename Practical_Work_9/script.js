@@ -41,3 +41,11 @@ const arr3 = arr1.slice(0,3);
 arr3.forEach(elem =>{
     console.log(elem);
 });
+
+//1.2.11
+const arr3Reversed = arr3.reverse();
+
+//1.2.12
+arr3Reversed.forEach(elem =>{
+    console.log(elem);
+});
