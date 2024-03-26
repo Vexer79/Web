@@ -68,7 +68,7 @@ for (const index in arr1) {
 }
 
 //1.2.18
-for(const key in arr1[5]){
+for (const key in arr1[5]) {
     console.log(arr1[5][key]);
 }
 
@@ -89,3 +89,22 @@ for (const index in arr1) {
 for (const elem of arr1) {
     console.log(elem);
 }
+
+//1.2.23
+const Petryk = {
+    name: "Petryk",
+    skill: "JS",
+    level: "junior",
+};
+
+const Mychajlyk = {
+    name: "Mychajlyk",
+    skill: "HTML/CSS",
+    level: "middle",
+};
+
+const Volodyk = {
+    name: "Volodyk",
+    skill: "TS",
+    level: "trainee",
+};
