@@ -17,3 +17,6 @@ const arr1 = [
 
 //1.2.4
 arr1.forEach(value => {console.log(value);});
+
+//1.2.5
+arr1.splice(1,1,8);
