@@ -157,3 +157,6 @@ console.log(set1.has(Mychajlyk));
 for (const elem of set1) {
     console.log(elem);
 }
+
+//1.2.35
+set1.delete(Volodyk);
