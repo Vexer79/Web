@@ -108,3 +108,9 @@ const Volodyk = {
     skill: "TS",
     level: "trainee",
 };
+
+//1.2.24
+const map1 = new Map();
+map1.set(Petryk.name, Petryk);
+map1.set(Mychajlyk.name, Mychajlyk);
+map1.set(Volodyk.name, Volodyk);
