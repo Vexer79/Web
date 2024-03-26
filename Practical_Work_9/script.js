@@ -66,3 +66,8 @@ console.log(arr1[6](-6));
 for (const index in arr1) {
     console.log(arr1[index]);
 }
+
+//1.2.18
+for(const key in arr1[5]){
+    console.log(arr1[5][key]);
+}
