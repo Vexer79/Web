@@ -114,3 +114,6 @@ const map1 = new Map();
 map1.set(Petryk.name, Petryk);
 map1.set(Mychajlyk.name, Mychajlyk);
 map1.set(Volodyk.name, Volodyk);
+
+//1.2.25
+// console.log(map1.get("Ivanko"));
