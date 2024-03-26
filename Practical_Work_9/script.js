@@ -35,10 +35,10 @@ arr2.forEach((elem) => {
 });
 
 //1.2.9
-const arr3 = arr1.slice(0,3);
+const arr3 = arr1.slice(0, 3);
 
 //1.2.10
-arr3.forEach(elem =>{
+arr3.forEach((elem) => {
     console.log(elem);
 });
 
@@ -46,9 +46,12 @@ arr3.forEach(elem =>{
 const arr3Reversed = arr3.reverse();
 
 //1.2.12
-arr3Reversed.forEach(elem =>{
+arr3Reversed.forEach((elem) => {
     console.log(elem);
 });
 
 //1.2.13
 console.log(arr1.indexOf(-6));
+
+//1.2.14
+console.log(arr1.filter((elem) => elem > 4));
