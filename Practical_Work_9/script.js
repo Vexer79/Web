@@ -146,3 +146,6 @@ const Antypko = {
     skill: "PHP",
     level: "senior",
 };
+
+//1.2.32
+console.log(set1.has(Antypko));
