@@ -71,3 +71,8 @@ for (const index in arr1) {
 for(const key in arr1[5]){
     console.log(arr1[5][key]);
 }
+
+//1.2.19
+for (const elem of arr1) {
+    console.log(elem);
+}
