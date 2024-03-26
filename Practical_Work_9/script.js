@@ -160,3 +160,8 @@ for (const elem of set1) {
 
 //1.2.35
 set1.delete(Volodyk);
+
+//1.2.36
+for (const person of set1) {
+    console.log(`${person.name} is ${person.level} in ${person.skill}`);
+}
