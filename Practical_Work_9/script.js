@@ -16,7 +16,12 @@ const arr1 = [
 ];
 
 //1.2.4
-arr1.forEach(value => {console.log(value);});
+arr1.forEach((value) => {
+    console.log(value);
+});
 
 //1.2.5
-arr1.splice(1,1,8);
+arr1.splice(1, 1, 8);
+
+//1.2.6
+arr1.splice(3, 0, "Hello");
