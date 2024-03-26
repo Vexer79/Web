@@ -149,3 +149,6 @@ const Antypko = {
 
 //1.2.32
 console.log(set1.has(Antypko));
+
+//1.2.33
+console.log(set1.has(Mychajlyk));
