@@ -117,3 +117,6 @@ map1.set(Volodyk.name, Volodyk);
 
 //1.2.25
 // console.log(map1.get("Ivanko"));
+
+//1.2.26
+console.log(map1.get("Volodyk"));
