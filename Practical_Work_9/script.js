@@ -120,3 +120,8 @@ map1.set(Volodyk.name, Volodyk);
 
 //1.2.26
 console.log(map1.get("Volodyk"));
+
+//1.2.27
+for (const key of map1.keys()) {
+    console.log(key);
+}
