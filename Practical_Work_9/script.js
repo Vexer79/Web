@@ -125,3 +125,6 @@ console.log(map1.get("Volodyk"));
 for (const key of map1.keys()) {
     console.log(key);
 }
+
+//1.2.28
+map1.delete('Mychajlyk');
