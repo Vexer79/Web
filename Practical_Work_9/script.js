@@ -152,3 +152,8 @@ console.log(set1.has(Antypko));
 
 //1.2.33
 console.log(set1.has(Mychajlyk));
+
+//1.2.34
+for (const elem of set1) {
+    console.log(elem);
+}
