@@ -127,7 +127,7 @@ for (const key of map1.keys()) {
 }
 
 //1.2.28
-map1.delete('Mychajlyk');
+map1.delete("Mychajlyk");
 
 //1.2.29
 for (const person of map1) {
@@ -139,3 +139,10 @@ const set1 = new Set();
 set1.add(Petryk);
 set1.add(Mychajlyk);
 set1.add(Volodyk);
+
+//1.2.31
+const Antypko = {
+    name: "Antypko",
+    skill: "PHP",
+    level: "senior",
+};
