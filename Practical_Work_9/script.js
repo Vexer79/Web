@@ -49,3 +49,6 @@ const arr3Reversed = arr3.reverse();
 arr3Reversed.forEach(elem =>{
     console.log(elem);
 });
+
+//1.2.13
+console.log(arr1.indexOf(-6));
