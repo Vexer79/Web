@@ -84,3 +84,8 @@ arr1.version = "1.0.0";
 for (const index in arr1) {
     console.log(arr1[index]);
 }
+
+//1.2.22
+for (const elem of arr1) {
+    console.log(elem);
+}
