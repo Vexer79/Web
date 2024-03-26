@@ -133,3 +133,9 @@ map1.delete('Mychajlyk');
 for (const person of map1) {
     console.log(`${person.name} is ${person.level} in ${person.skill}`);
 }
+
+//1.2.30
+const set1 = new Set();
+set1.add(Petryk);
+set1.add(Mychajlyk);
+set1.add(Volodyk);
