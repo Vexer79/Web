@@ -128,3 +128,8 @@ for (const key of map1.keys()) {
 
 //1.2.28
 map1.delete('Mychajlyk');
+
+//1.2.29
+for (const person of map1) {
+    console.log(`${person.name} is ${person.level} in ${person.skill}`);
+}
