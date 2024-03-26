@@ -58,3 +58,6 @@ console.log(arr1.filter((elem) => elem > 4));
 
 //1.2.15
 arr1[7](arr1[5]);
+
+//1.2.16
+console.log(arr1[6](-6));
