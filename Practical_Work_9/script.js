@@ -61,3 +61,8 @@ arr1[7](arr1[5]);
 
 //1.2.16
 console.log(arr1[6](-6));
+
+//1.2.17
+for (const index in arr1) {
+    console.log(arr1[index]);
+}
