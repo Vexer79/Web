@@ -1,6 +1,8 @@
 (function (global) {
     const SortLibrary = {};
 
+    const isSorted = (arr) => arr.every((value, index, item) => !index || item[index - 1] <= value);
+
     function bubbleSort(array, reversed) {
         while (!isSorted(array)) {
             for (let index = 0; index < array.length - 1; index++) {
@@ -13,8 +15,6 @@
         }
         return (reversed) ? array.reverse() : array;
     }
-
-    const isSorted = (arr) => arr.every((value, index, item) => !index || item[index - 1] <= value);
 
     console.log(bubbleSort([1, 3, 6, 3, 1, 3, 5], true));
 
