@@ -6,12 +6,12 @@
             ? array.every((value, index, item) => !index || item[index - 1] >= value)
             : array.every((value, index, item) => !index || item[index - 1] <= value);
     };
-    
+
     function getCompare(reversed) {
         return reversed ? (left, right) => left < right : (left, right) => left > right;
     }
 
-    function bubbleSort(array, reversed) {
+    SortLibrary.bubbleSort = function (array, reversed) {
         const compare = getCompare(reversed);
         let compareCount = 0;
         let swapCount = 0;
@@ -31,9 +31,7 @@
         return array;
     }
 
-    console.log(bubbleSort([6, 5, 4], true));
-
-    function selectionSort(array, reversed) {
+    SortLibrary.selectionSort = function (array, reversed) {
         const compare = getCompare(!reversed);
         let compareCount = 0;
         let swapCount = 0;
@@ -55,9 +53,8 @@
         return array;
     }
 
-    console.log(selectionSort([6, 5, 4], true));
 
-    function insertionSort(array, reversed) {
+    SortLibrary.insertionSort = function (array, reversed) {
         const compare = getCompare(reversed);
         let compareCount = 0;
         let swapCount = 0;
@@ -79,8 +76,6 @@
         console.log(`Swap count: ${swapCount}`);
         return array;
     }
-
-    console.log(insertionSort([6, 5, 4]), true);
 
     global.SortLibrary = SortLibrary;
 })(window);
