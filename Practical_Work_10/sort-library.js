@@ -36,6 +36,21 @@
 
     console.log(selectionSort([1, 3, 6, 3, 1, 3, 5]));
 
+    function insertionSort(array, reversed) {
+        for (let index = 1; index < array.length; index++) {
+            let left = index - 1;
+            while (left > -1 && array[left] > array[left + 1]) {
+                let tempElem = array[left + 1];
+                array[left + 1] = array[left];
+                array[left] = tempElem;
+                left--;
+            }
+        }
+
+        return reversed ? array.reverse() : array;
+    }
+
+    console.log(insertionSort([6, 5, 4, 3, 2, 1]));
 
     global.SortLibrary = SortLibrary;
 })(window);
