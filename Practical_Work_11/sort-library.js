@@ -86,15 +86,12 @@
                 for (let element = 0; element < index; element++) {
                     compareCount++;
                     if (
-                        compare(
-                            array[index * count + element],
-                            array[index * (count + 1) + element]
-                        )
+                        compare(array[index * count + element], array[index * count + element + 1])
                     ) {
                         swapCount++;
                         let tempElem = array[index * count + element];
-                        array[index * count + element] = array[index * (count + 1) + element];
-                        array[index * (count + 1) + element] = tempElem;
+                        array[index * count + element] = array[index * count + 1 + element];
+                        array[index * count + 1 + element] = tempElem;
                     }
                 }
             }
