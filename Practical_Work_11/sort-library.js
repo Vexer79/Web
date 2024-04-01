@@ -2,10 +2,18 @@
     const SortLibrary = {};
 
     const isSorted = function (array, reversed) {
-        return reversed
-            ? array.every((value, index, item) => !index || item[index - 1] >= value)
-            : array.every((value, index, item) => !index || item[index - 1] <= value);
+        const compare = getCompare(reversed);
+        for (let i = 0; i < array.length - 1; i++) {
+            if (compare(array[i], array[i + 1])) {
+                return false;
+            }
+        }
+        return true;
     };
+
+    const hintUndefined = function(){
+        console.log("undefined behaves such as the largest number");
+    }
 
     function getCompare(reversed) {
         if (reversed) {
@@ -29,7 +37,8 @@
         }
     }
 
-    SortLibrary.bubbleSort = function (array, reversed = false) {
+    SortLibrary.dotComSort = function (array, reversed) {
+        array.includes(undefined) && hintUndefined();
         const compare = getCompare(reversed);
         let compareCount = 0;
         let swapCount = 0;
@@ -49,7 +58,8 @@
         return array;
     };
 
-    SortLibrary.selectionSort = function (array, reversed = false) {
+    SortLibrary.ctrlASort = function (array, reversed) {
+        array.includes(undefined) && hintUndefined();
         const compare = getCompare(!reversed);
         let compareCount = 0;
         let swapCount = 0;
@@ -71,7 +81,8 @@
         return array;
     };
 
-    SortLibrary.insertionSort = function (array, reversed = false) {
+    SortLibrary.insertionSort = function (array, reversed) {
+        array.includes(undefined) && hintUndefined();
         const compare = getCompare(reversed);
         let compareCount = 0;
         let swapCount = 0;
@@ -94,7 +105,8 @@
         return array;
     };
 
-    SortLibrary.shellSort = function (array, reversed = false) {
+    SortLibrary.zapravkaSort = function (array, reversed) {
+        array.includes(undefined) && hintUndefined();
         const compare = getCompare(reversed);
         let compareCount = 0;
         let swapCount = 0;
@@ -118,7 +130,8 @@
     let quickSortCompareCount = 0;
     let quickSortSwapCount = 0;
 
-    SortLibrary.quickSort = function (array, reversed = false) {
+    SortLibrary.studentyEvakyjytsaPidChasMinuvannyaSort = function (array, reversed) {
+        array.includes(undefined) && hintUndefined();
         if (array.length <= 1) {
             return array;
         }
