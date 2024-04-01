@@ -3,26 +3,44 @@
 
     const isSorted = function (array, reversed) {
         return reversed
-            ? array.every((value, gap, item) => !gap || item[gap - 1] >= value)
-            : array.every((value, gap, item) => !gap || item[gap - 1] <= value);
+            ? array.every((value, index, item) => !index || item[index - 1] >= value)
+            : array.every((value, index, item) => !index || item[index - 1] <= value);
     };
 
     function getCompare(reversed) {
-        return reversed ? (left, right) => left < right : (left, right) => left > right;
+        if (reversed) {
+            return function (left, right) {
+                if (left === undefined) {
+                    return false;
+                } else if (right === undefined) {
+                    return true;
+                }
+                return left < right;
+            };
+        } else {
+            return function (left, right) {
+                if (left === undefined) {
+                    return true;
+                } else if (right === undefined) {
+                    return false;
+                }
+                return left > right;
+            };
+        }
     }
 
-    SortLibrary.bubbleSort = function (array, reversed) {
+    SortLibrary.bubbleSort = function (array, reversed = false) {
         const compare = getCompare(reversed);
         let compareCount = 0;
         let swapCount = 0;
         while (!isSorted(array, reversed)) {
-            for (let gap = 0; gap < len - 1; gap++) {
+            for (let index = 0; index < array.length - 1; index++) {
                 compareCount++;
-                if (compare(array[gap], array[gap + 1])) {
+                if (compare(array[index], array[index + 1])) {
                     swapCount++;
-                    let tempElem = array[gap];
-                    array[gap] = array[gap + 1];
-                    array[gap + 1] = tempElem;
+                    let tempElem = array[index];
+                    array[index] = array[index + 1];
+                    array[index + 1] = tempElem;
                 }
             }
         }
@@ -31,21 +49,21 @@
         return array;
     };
 
-    SortLibrary.selectionSort = function (array, reversed) {
+    SortLibrary.selectionSort = function (array, reversed = false) {
         const compare = getCompare(!reversed);
         let compareCount = 0;
         let swapCount = 0;
-        for (let gap = 0; gap < len - 1; gap++) {
-            let min = gap;
-            for (let current = gap + 1; current < len; current++) {
+        for (let index = 0; index < array.length - 1; index++) {
+            let min = index;
+            for (let current = index + 1; current < array.length; current++) {
                 compareCount++;
                 if (compare(array[current], array[min])) {
                     min = current;
                 }
             }
             swapCount++;
-            let tempElem = array[gap];
-            array[gap] = array[min];
+            let tempElem = array[index];
+            array[index] = array[min];
             array[min] = tempElem;
         }
         console.log(`Compare count: ${compareCount}`);
@@ -53,12 +71,12 @@
         return array;
     };
 
-    SortLibrary.insertionSort = function (array, reversed) {
+    SortLibrary.insertionSort = function (array, reversed = false) {
         const compare = getCompare(reversed);
         let compareCount = 0;
         let swapCount = 0;
-        for (let gap = 1; gap < len; gap++) {
-            let left = gap - 1;
+        for (let index = 1; index < array.length; index++) {
+            let left = index - 1;
             if (isSorted(array, reversed)) {
                 break;
             }
@@ -76,7 +94,7 @@
         return array;
     };
 
-    SortLibrary.shellSort = function (array, reversed) {
+    SortLibrary.shellSort = function (array, reversed = false) {
         const compare = getCompare(reversed);
         let compareCount = 0;
         let swapCount = 0;
