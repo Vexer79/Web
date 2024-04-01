@@ -115,5 +115,45 @@
         return array;
     };
 
+    let quickSortCompareCount = 0;
+    let quickSortSwapCount = 0;
+
+    SortLibrary.quickSort = function (array, reversed = false) {
+        if (array.length <= 1) {
+            return array;
+        }
+        const compare = getCompare(reversed);
+        quickSort(array, 0, array.length - 1, compare);
+        console.log(`Compare count: ${quickSortCompareCount}`);
+        console.log(`Swap count: ${quickSortSwapCount}`);
+        quickSortCompareCount = 0;
+        quickSortSwapCount = 0;
+        return array;
+    };
+
+    function partition(array, left, right, compare) {
+        let pivot = array[right];
+        let index = left - 1;
+        for (let i = left; i < right; i++) {
+            if (compare(array[i], pivot)) {
+                quickSortCompareCount++;
+                quickSortSwapCount++;
+                index++;
+                [array[i], array[index]] = [array[index], array[i]];
+            }
+        }
+        quickSortSwapCount++;
+        [array[index + 1], array[right]] = [array[right], array[index + 1]];
+        return index + 1;
+    }
+
+    function quickSort(array, left, right, compare) {
+        if (left < right) {
+            let part = partition(array, left, right, compare);
+            quickSort(array, left, part - 1, compare);
+            quickSort(array, part + 1, right, compare);
+        }
+    }
+
     global.SortLibrary = SortLibrary;
 })(window);
