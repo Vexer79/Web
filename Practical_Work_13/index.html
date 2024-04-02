@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Game</title>
+    </head>
+    <body>
+        <menu>
+            <h1>Game</h1>
+            <label for="difficulty">Choose difficulty:</label>
+            <select name="difficulty" id="difficulty">
+                <option value="" selected disabled hidden>Please choose an option</option>
+                <option value="Lazy">Lazy</option>
+                <option value="Medium">Medium</option>
+                <option value="Impossible">Impossible</option>
+            </select>
+            <label for="color">Choose color:</label>
+            <select name="color" id="color">
+                <option value="" selected disabled hidden>Please choose an option</option>
+                <option value="red">Red</option>
+                <option value="yellow">Yellow</option>
+                <option value="orange">Orange</option>
+            </select>
+            <button>Start</button>
+        </menu>
+        <div>
+            <div>
+                <label for="score">score: </label>
+                <span name="score" id="score"></span>
+            </div>
+            <div>
+                <label for="time">time left for click: </label>
+                <span name="time" id="time"></span>
+            </div>
+        </div>
+        <div id="player"></div>
+    </body>
+</html>
