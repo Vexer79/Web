@@ -25,7 +25,7 @@
                     player.style.display = "none";
                     score = 0;
                     scoreField.textContent = score;
-                    player.revoveEventListener("click", addScore, true);
+                    player.removeEventListener("click", addScore, true);
                 }
             }, 10000);
         }
