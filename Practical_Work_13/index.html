@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="../Practical_Work_2/reset-style.css">
     </head>
     <body>
-        <menu>
+        <div id="menu">
             <h1>Game</h1>
             <label for="difficulty">Choose difficulty:</label>
             <select name="difficulty" id="difficulty">
@@ -24,12 +24,12 @@
                 <option value="yellow">Yellow</option>
                 <option value="orange">Orange</option>
             </select>
-            <button>Start</button>
-        </menu>
-        <div>
+            <button id="start">Start</button>
+        </div>
+        <div id="game">
             <div>
                 <label for="score">score: </label>
-                <span name="score" id="score"></span>
+                <span name="score" id="score">1</span>
             </div>
             <div>
                 <label for="time">time left for click: </label>
