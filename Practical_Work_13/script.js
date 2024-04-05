@@ -4,6 +4,9 @@
     const menu = document.getElementById("menu");
     const game = document.getElementById("game");
     const scoreField = document.getElementById("score");
+    const scoreTable = document.getElementById("scoreTable");
+    const tbody = document.querySelector("tbody");
+    const template = document.querySelector("#score-template");
     let timer = 0;
     let score = 0;
 
@@ -32,6 +35,7 @@
         if (difficulty.value && color.value) {
             const player = document.getElementById("player");
             menu.style.display = "none";
+            scoreTable.style.display = "none";
             game.style.display = "block";
             player.style.display = "block";
             player.style.backgroundColor = color.value;
@@ -105,12 +109,21 @@
     const end = function () {
         if (!alert(`Your score - ${score}`)) {
             menu.style.display = "block";
+            scoreTable.style.display = "block";
             game.style.display = "none";
             player.style.display = "none";
+            player.removeEventListener("click", addScore, true);
+            addScoreToTable(difficulty.value, score);
             score = 0;
             scoreField.textContent = score;
-            player.removeEventListener("click", addScore, true);
         }
     };
+    function addScoreToTable(difficulty, score){
+        const clone = template.content.cloneNode(true);
+        let th = clone.querySelectorAll("th");
+        th[0].textContent = difficulty;
+        th[1].textContent = score;
+        tbody.appendChild(clone);
+    }
     document.getElementById("start").addEventListener("click", start);
 })(window);
