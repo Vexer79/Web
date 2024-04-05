@@ -17,14 +17,15 @@
             <label for="meal-time">Обід</label>
             <input type="radio" name="meal-time" id="lunch" value="обід" required />
             <label for="meal-time">Вечеря</label>
-            <input type="radio" name="meal-time" id="dinner" value="вечеря" required />
-            <label for="meal">Борщ</label><input type="checkbox" name="meal" id="borsch" />
+            <input type="radio" name="meal-time" id="dinner" value="вечерю" required />
+            <label for="meal">Борщ</label><input type="checkbox" name="meal" id="borsch" value="борщ" />
             <label for="meal">Вівсяна каша</label
-            ><input type="checkbox" name="meal" id="porridge" /><label for="meal"
+            ><input type="checkbox" name="meal" id="porridge" value="вівсяну кашу" /><label for="meal"
                 >Паста Болоньєзе</label
-            ><input type="checkbox" name="meal" id="pasta" /><label for="meal">Піца</label
-            ><input type="checkbox" name="meal" id="pizza" /><label for="meal">Шашлик</label
-            ><input type="checkbox" name="meal" id="barbecue" />
+            ><input type="checkbox" name="meal" id="pasta" value="пасту Болоньєзе" /><label for="meal">Піца</label
+            ><input type="checkbox" name="meal" id="pizza" value="піцу"/><label for="meal">Шашлик</label
+            ><input type="checkbox" name="meal" id="barbecue" value="шашлик"/>
+            <textarea name="comment" id="comment" cols="30" rows="10" required></textarea>
             <button type="button" id="send-button">Надіслати</button>
         </form>
         <script src="script.js"></script>
