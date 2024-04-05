@@ -75,37 +75,35 @@
         return [
             filter(
                 getRandomIntInclusive(
-                    currentPosition.left - range.x,
-                    currentPosition.left + range.x - getPlayerSize()
+                    currentPosition.left - range.x < 0 ? 0 : currentPosition.left - range.x,
+                    currentPosition.left + range.x
                 ),
                 0,
-                global.innerWidth,
-                getPlayerSize()
+                global.innerWidth
             ),
             filter(
                 getRandomIntInclusive(
-                    currentPosition.top - range.y,
-                    currentPosition.top + range.y - getPlayerSize()
+                    currentPosition.top - range.y < 0 ? 0 : currentPosition.top - range.y,
+                    currentPosition.top + range.y
                 ),
                 0,
-                global.innerHeight,
-                getPlayerSize()
+                global.innerHeight
             ),
         ];
     };
 
-    function filter(current, left, right, playerSize) {
+    function filter(current, left, right) {
         if (current < left) {
             return left;
-        } else if (current > right - playerSize) {
-            return right - playerSize;
+        } else if (current > right - getPlayerSize()) {
+            return right - getPlayerSize();
         } else {
-            return right;
+            return current;
         }
     }
 
     const end = function () {
-        if (!alert("my text here")) {
+        if (!alert(`Your score - ${score}`)) {
             menu.style.display = "block";
             game.style.display = "none";
             player.style.display = "none";
