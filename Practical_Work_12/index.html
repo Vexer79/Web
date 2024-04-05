@@ -4,31 +4,70 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Practical Work #12</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style.css" />
     </head>
     <body>
         <h1>Практична робота №12 Рокицький Іван Ігорович</h1>
-        <form>
-            <label for="username">Ім’я користувача:</label>
-            <input type="text" name="username" id="username" required />
-            <label for="email">Електронна пошта:</label>
-            <input type="email" name="email" id="email" required />
-            <label for="meal-time">Сніданок</label>
-            <input type="radio" name="meal-time" id="breakfast" value="сніданок" required />
-            <label for="meal-time">Обід</label>
-            <input type="radio" name="meal-time" id="lunch" value="обід" required />
-            <label for="meal-time">Вечеря</label>
-            <input type="radio" name="meal-time" id="dinner" value="вечерю" required />
-            <label for="meal">Борщ</label><input type="checkbox" name="meal" id="borsch" value="борщ" />
-            <label for="meal">Вівсяна каша</label
-            ><input type="checkbox" name="meal" id="porridge" value="вівсяну кашу" /><label for="meal"
-                >Паста Болоньєзе</label
-            ><input type="checkbox" name="meal" id="pasta" value="пасту Болоньєзе" /><label for="meal">Піца</label
-            ><input type="checkbox" name="meal" id="pizza" value="піцу"/><label for="meal">Шашлик</label
-            ><input type="checkbox" name="meal" id="barbecue" value="шашлик"/>
-            <textarea name="comment" id="comment" cols="30" rows="10" required></textarea>
-            <button type="button" id="send-button">Надіслати</button>
-        </form>
+        <div class="wrapper">
+            <form>
+                <div class="row">
+                    <div class="col-6">
+                        <label for="username">Ім’я користувача:</label>
+                        <input type="text" name="username" id="username" required />
+                    </div>
+                    <div class="col-6">
+                        <label for="email">Електронна пошта:</label>
+                        <input type="email" name="email" id="email" required />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <input
+                            type="radio"
+                            name="meal-time"
+                            id="breakfast"
+                            value="сніданок"
+                            required
+                        />
+                        <label for="meal-time">Сніданок</label>
+                    </div>
+                    <div class="col-4">
+                        <input type="radio" name="meal-time" id="lunch" value="обід" required />
+                        <label for="meal-time">Обід</label>
+                    </div>
+                    <div class="col-4">
+                        <input type="radio" name="meal-time" id="dinner" value="вечерю" required />
+                        <label for="meal-time">Вечеря</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+                        <input type="checkbox" name="meal" id="borsch" value="борщ" />
+                        <label for="meal">Борщ</label>
+                    </div>
+                    <div class="col-3">
+                        <input type="checkbox" name="meal" id="porridge" value="вівсяну кашу" />
+                        <label for="meal">Вівсяна каша</label>
+                    </div>
+                    <div class="col-3">
+                        <input type="checkbox" name="meal" id="pasta" value="пасту Болоньєзе" />
+                        <label for="meal">Паста Болоньєзе</label>
+                    </div>
+                    <div class="col-3">
+                        <input type="checkbox" name="meal" id="pizza" value="піцу" />
+                        <label for="meal">Піца</label>
+                    </div>
+                    <div class="col-3">
+                        <input type="checkbox" name="meal" id="barbecue" value="шашлик" />
+                        <label for="meal">Шашлик</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <textarea name="comment" id="comment" cols="30" rows="5" placeholder="Коментар" required></textarea>
+                </div>
+                <button type="button" id="send-button">Надіслати</button>
+            </form>
+        </div>
         <div id="output"></div>
         <script src="script.js"></script>
     </body>
