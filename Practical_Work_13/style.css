@@ -10,6 +10,16 @@
     top: 0;
     left: 0;
 }
+#scoreTable th {
+    border: solid 1px black;
+}
+td {
+    padding: 0;
+    margin: 0;
+}
+#scoreTable {
+    border-collapse: collapse;
+}
 * {
     user-select: none;
 }
