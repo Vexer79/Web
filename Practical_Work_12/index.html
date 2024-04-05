@@ -7,23 +7,26 @@
     </head>
     <body>
         <h1>Практична робота №12 Рокицький Іван Ігорович</h1>
-        <label for="username">Ім’я користувача:</label>
-        <input type="text" name="username" id="username" />
-        <label for="email">Електронна пошта:</label>
-        <input type="email" name="email" id="email" />
-        <label for="email">Сніданок</label>
-        <input type="radio" name="breakfast" id="breakfast" />
-        <label for="email">Обід</label>
-        <input type="radio" name="lunch" id="lunch" />
-        <label for="email">Вечеря</label>
-        <input type="radio" name="dinner" id="dinner" />
-
-        <!-- <label for="">Борщ</label><input type="checkbox" name="" id="" />
-        <label for="">Вівсяна каша</label><input type="checkbox" name="" id="" /><label for=""
-            >Паста Болоньєзе</label
-        ><input type="checkbox" name="" id="" /><label for="">Піца</label
-        ><input type="checkbox" name="" id="" /><label for="">Шашлик</label
-        ><input type="checkbox" name="" id="" /> -->
+        <form>
+            <label for="username">Ім’я користувача:</label>
+            <input type="text" name="username" id="username" required />
+            <label for="email">Електронна пошта:</label>
+            <input type="email" name="email" id="email" required />
+            <label for="meal-time">Сніданок</label>
+            <input type="radio" name="meal-time" id="breakfast" value="сніданок" required />
+            <label for="meal-time">Обід</label>
+            <input type="radio" name="meal-time" id="lunch" value="обід" required />
+            <label for="meal-time">Вечеря</label>
+            <input type="radio" name="meal-time" id="dinner" value="вечеря" required />
+            <label for="meal">Борщ</label><input type="checkbox" name="meal" id="borsch" />
+            <label for="meal">Вівсяна каша</label
+            ><input type="checkbox" name="meal" id="porridge" /><label for="meal"
+                >Паста Болоньєзе</label
+            ><input type="checkbox" name="meal" id="pasta" /><label for="meal">Піца</label
+            ><input type="checkbox" name="meal" id="pizza" /><label for="meal">Шашлик</label
+            ><input type="checkbox" name="meal" id="barbecue" />
+            <button type="button" id="send-button">Надіслати</button>
+        </form>
         <script src="script.js"></script>
     </body>
 </html>
