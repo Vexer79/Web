@@ -1,5 +1,6 @@
 (function (global) {
     let timer;
+    let time;
     fetch("field.json")
         .then((response) => {
             return response.json();
@@ -14,15 +15,17 @@
     const start = function ({ target, fieldPattern }) {
         const startButton = document.getElementById("start-button");
         const restartButton = document.getElementById("restart-button");
-        let fieldPatternCopy = fieldPattern.map((arr) => arr.slice());
-        const field = buildField(fieldPatternCopy);
-        startButton.addEventListener((event) => {
+        const fieldPatternCopy = fieldPattern.map((arr) => arr.slice());
+        let field = buildField(fieldPatternCopy);
+        setTarget(target);
+        startButton.addEventListener("click", (event) => {
             startTimer();
             addEventsToCells(field, fieldPatternCopy);
         });
-        restartButton.addEventListener((event)=>{
-            fieldPatternCopy = fieldPattern.map((arr) => arr.slice());
+        restartButton.addEventListener("click", (event) => {
+            const fieldPatternCopy = fieldPattern.map((arr) => arr.slice());
             startTimer();
+            field = buildField(fieldPatternCopy);
             addEventsToCells(field, fieldPatternCopy);
         });
     };
@@ -31,15 +34,15 @@
         const fieldContainer = document.getElementById("field-container");
         clearContainer(fieldContainer);
         const field = [];
-        fieldPattern.forEach((row) => {
+        for (let i = 0; i < fieldPattern.length; i++) {
             const fieldRow = [];
-            row.forEach((cellState) => {
-                const cell = createCell(cellState);
+            for (let j = 0; j < fieldPattern[0].length; j++) {
+                const cell = createCell(fieldPattern[i][j], i, j);
                 fieldContainer.appendChild(cell);
                 fieldRow.push(cell);
-            });
+            }
             field.push(fieldRow);
-        });
+        }
         return field;
     };
 
@@ -47,33 +50,48 @@
         container.innerHTML = "";
     };
 
-    const createCell = function (state) {
+    const createCell = function (state, i, j) {
         const cell = document.createElement("div");
-        cell.classList.add(state ? "active" : "");
+        cell.id = `${i}_${j}`;
+        state && cell.classList.add("active");
         return cell;
     };
 
     const startTimer = function () {
-        timer = setInterval(() => {}, 1000);
+        time = 0;
+        const timerContainer = document.getElementById("timer");
+        timerContainer.textContent = "00:00";
+        timer = setInterval(() => {
+            time++;
+            timerContainer.textContent =
+                Math.floor((time % 3600) / 60)
+                    .toString()
+                    .padStart(2, "0") +
+                ":" +
+                Math.floor(time % 60)
+                    .toString()
+                    .padStart(2, "0");
+        }, 1000);
     };
 
     const addEventsToCells = function (field, fieldPattern) {
         for (let i = 0; i < field.length; i++) {
             for (let j = 0; j < field[0].length; j++) {
                 field[i][j].addEventListener("click", (event) => {
-                    toggleCell(field, fieldPattern, i, j);
-                    toggleCell(field, fieldPattern, i + 1, j);
-                    toggleCell(field, fieldPattern, i - 1, j);
-                    toggleCell(field, fieldPattern, i, j + 1);
-                    toggleCell(field, fieldPattern, i, j - 1);
+                    toggleCell(fieldPattern, i, j);
+                    toggleCell(fieldPattern, i + 1, j);
+                    toggleCell(fieldPattern, i - 1, j);
+                    toggleCell(fieldPattern, i, j + 1);
+                    toggleCell(fieldPattern, i, j - 1);
                     checkIsAllItemsAreZeros(fieldPattern) && end();
                 });
             }
         }
     };
 
-    const toggleCell = function (cell, fieldPattern, i, j) {
-        if (i > -1 && i < 6 && j > -1 && j < 6) {
+    const toggleCell = function (fieldPattern, i, j) {
+        const cell = document.getElementById(`${i}_${j}`);
+        if (cell) {
             fieldPattern[i][j] = !fieldPattern[i][j];
             cell.classList.toggle("active");
         }
