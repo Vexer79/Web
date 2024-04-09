@@ -1,6 +1,7 @@
 (function (global) {
     let timer;
     let time;
+    let movesCount = 0;
     fetch("field.json")
         .then((response) => {
             return response.json();
@@ -26,6 +27,8 @@
             const fieldPatternCopy = fieldPattern.map((arr) => arr.slice());
             startTimer();
             field = buildField(fieldPatternCopy);
+            movesCount = 0;
+            document.getElementById("moves").textContent = 0;
             addEventsToCells(field, fieldPatternCopy);
         });
     };
@@ -84,6 +87,7 @@
                     toggleCell(fieldPattern, i, j + 1);
                     toggleCell(fieldPattern, i, j - 1);
                     checkIsAllItemsAreZeros(fieldPattern) && end();
+                    setCount();
                 });
             }
         }
@@ -112,6 +116,11 @@
         if (!alert("the end")) {
         }
     };
+
+    const setCount = function () {
+        movesCount++;
+        document.getElementById("moves").textContent = movesCount;
+    }
 
     const stopTimer = function () {
         clearInterval(timer);
