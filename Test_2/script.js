@@ -14,4 +14,6 @@
 
     let array = generateArray(20);
     console.log(SortLibrary.studentyEvakyjytsaPidChasMinuvannyaSort(array, true));
+    document.getElementById("container").textContent = array;
+    
 })(window);
