@@ -4,10 +4,34 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Практична робота №14</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style.css" />
     </head>
     <body>
         <h1>Практична робота №14 Рокицький Іван Ігорович</h1>
+        <div class="wrapper">
+            <div class="control-panel">
+                <button id="start-button">New game</button>
+                <button id="restart-button">Restart</button>
+            </div>
+            <div class="game-container">
+                <div id="field-container"></div>
+                <div id="stats">
+                    <div class="col">
+                        <label for="timer">Timer</label>
+                        <div id="timer" name="timer">00:00</div>
+                    </div>
+                    <div class="col">
+                        <label for="target">Target</label>
+                        <div id="target" name="target"></div>
+                    </div>
+                    <div>
+                        <label for="moves">Moves</label>
+                        <div id="moves" name="moves">0</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <script src="script.js"></script>
     </body>
 </html>
