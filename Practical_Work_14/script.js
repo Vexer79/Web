@@ -12,12 +12,18 @@
         });
 
     const start = function ({ target, fieldPattern }) {
-        const fieldPatternCopy = fieldPattern.map((arr) => arr.slice());
-        const field = buildField(fieldPatternCopy);
         const startButton = document.getElementById("start-button");
+        const restartButton = document.getElementById("restart-button");
+        let fieldPatternCopy = fieldPattern.map((arr) => arr.slice());
+        const field = buildField(fieldPatternCopy);
         startButton.addEventListener((event) => {
             startTimer();
-            addEventsToCells(field, fieldPattern);
+            addEventsToCells(field, fieldPatternCopy);
+        });
+        restartButton.addEventListener((event)=>{
+            fieldPatternCopy = fieldPattern.map((arr) => arr.slice());
+            startTimer();
+            addEventsToCells(field, fieldPatternCopy);
         });
     };
 
@@ -43,7 +49,7 @@
 
     const createCell = function (state) {
         const cell = document.createElement("div");
-        cell.classList.add(fieldPattern[i][j] ? "active" : "");
+        cell.classList.add(state ? "active" : "");
         return cell;
     };
 
