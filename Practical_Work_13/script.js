@@ -7,8 +7,10 @@
     const scoreTable = document.getElementById("scoreTable");
     const tbody = document.querySelector("tbody");
     const template = document.querySelector("#score-template");
+    const timerContainer = document.getElementById("time");
     let timer = 0;
     let score = 0;
+    let interval;
 
     const range = {
         x:
@@ -33,13 +35,26 @@
         setPlayerPosition(player, generateRandomPosition({ left: 1, top: 1 }));
         player.addEventListener("click", kill);
         if (difficulty.value && color.value) {
+            timer =
+                difficulty.value === "Lazy"
+                    ? 100
+                    : difficulty.value === "Medium"
+                    ? 50
+                    : difficulty.value === "Impossible"
+                    ? 10
+                    : 30;
+            timerContainer.textContent = timer;
+            interval = setInterval(() => {
+                timer--;
+                timerContainer.textContent = timer;
+                timer == -1 && end();
+            }, 1000);
             const player = document.getElementById("player");
             menu.style.display = "none";
             scoreTable.style.display = "none";
             game.style.display = "block";
             player.style.display = "block";
             player.style.backgroundColor = color.value;
-            setTimeout(end, 10000);
         }
     };
 
@@ -116,9 +131,10 @@
             addScoreToTable(difficulty.value, score);
             score = 0;
             scoreField.textContent = score;
+            clearInterval(interval);
         }
     };
-    function addScoreToTable(difficulty, score){
+    function addScoreToTable(difficulty, score) {
         const clone = template.content.cloneNode(true);
         let th = clone.querySelectorAll("th");
         th[0].textContent = difficulty;
