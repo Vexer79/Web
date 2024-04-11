@@ -25,6 +25,9 @@
         });
         restartButton.addEventListener("click", (event) => {
             const fieldPatternCopy = fieldPattern.map((arr) => arr.slice());
+            if (timer) {
+                stopTimer();
+            }
             startTimer();
             field = buildField(fieldPatternCopy);
             movesCount = 0;
@@ -120,7 +123,7 @@
     const setCount = function () {
         movesCount++;
         document.getElementById("moves").textContent = movesCount;
-    }
+    };
 
     const stopTimer = function () {
         clearInterval(timer);
