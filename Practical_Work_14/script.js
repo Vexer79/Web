@@ -2,28 +2,22 @@
     let timer;
     let time;
     let movesCount = 0;
-    fetch("field.json")
-        .then((response) => {
-            return response.json();
-        })
-        .then((object) => {
-            start(object);
-        })
-        .catch((error) => {
-            console.log(error);
-        });
 
     const start = function ({ target, fieldPattern }) {
-        const startButton = document.getElementById("start-button");
+        movesCount = 0;
+        setTarget(target);
+        setDefaultCount();
         const restartButton = document.getElementById("restart-button");
         const fieldPatternCopy = fieldPattern.map((arr) => arr.slice());
         let field = buildField(fieldPatternCopy);
-        setTarget(target);
-        startButton.addEventListener("click", (event) => {
-            startTimer();
-            addEventsToCells(field, fieldPatternCopy);
-        });
-        restartButton.addEventListener("click", (event) => {
+        addEventsToCells(field, fieldPatternCopy);
+        startTimer();
+        restartButton.removeEventListener("click", restart(fieldPattern));
+        restartButton.addEventListener("click", restart(fieldPattern));
+    };
+
+    const restart = function(fieldPattern){
+        return (event) => {
             const fieldPatternCopy = fieldPattern.map((arr) => arr.slice());
             if (timer) {
                 stopTimer();
@@ -33,7 +27,7 @@
             movesCount = 0;
             document.getElementById("moves").textContent = 0;
             addEventsToCells(field, fieldPatternCopy);
-        });
+        }
     };
 
     const buildField = function (fieldPattern) {
@@ -116,13 +110,19 @@
 
     const end = function () {
         stopTimer();
-        if (!alert("the end")) {
-        }
+        setTimeout(() => {
+            if (!alert("the end")) {
+            }
+        }, 500);
     };
 
     const setCount = function () {
         movesCount++;
         document.getElementById("moves").textContent = movesCount;
+    };
+
+    const setDefaultCount = function () {
+        document.getElementById("moves").textContent = 0;
     };
 
     const stopTimer = function () {
@@ -132,4 +132,26 @@
     const setTarget = function (target) {
         document.getElementById("target").textContent = target;
     };
+
+    buildField([
+        [0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0],
+    ]);
+
+    const startButton = document.getElementById("start-button");
+    startButton.addEventListener("click", () => {
+        fetch("field.json")
+            .then((response) => {
+                return response.json();
+            })
+            .then((object) => {
+                start(object);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+    });
 })(window);
