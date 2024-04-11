@@ -38,3 +38,15 @@
 .active {
     background-color: orange !important;
 }
+
+#stats {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.col {
+    display: flex;
+}
+.col > *{
+    padding: 0 5px;
+}
