@@ -10,6 +10,10 @@
     justify-content: center;
 }
 
+h1 {
+    text-align: center;
+}
+
 .control-panel {
     display: flex;
     align-items: flex-end;
@@ -52,7 +56,7 @@
 }
 
 @media (max-width: 768px) {
-    .wrapper{
+    .wrapper {
         flex-direction: column-reverse;
         align-items: center;
     }
