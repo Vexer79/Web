@@ -4,6 +4,9 @@
     let movesCount = 0;
 
     const start = function ({ target, fieldPattern }) {
+        if (timer) {
+            stopTimer();
+        }
         movesCount = 0;
         setTarget(target);
         setDefaultCount();
