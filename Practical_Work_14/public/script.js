@@ -143,7 +143,7 @@
 
     const startButton = document.getElementById("start-button");
     startButton.addEventListener("click", () => {
-        fetch("field.json")
+        fetch("/getTemplate")
             .then((response) => {
                 return response.json();
             })
