@@ -32,6 +32,9 @@ header {
 }
 .name-family-logo__span {
 }
+.nav__container {
+    display: flex;
+}
 nav {
 }
 nav ul {
@@ -44,11 +47,6 @@ nav ul > li:hover {
     filter: invert(1);
 }
 
-nav ul > li:last-child:hover {
-    filter: none;
-}
-ul > li a {
-}
 .catalog__link {
     background-image: url();
 }
@@ -67,4 +65,24 @@ ul > li a {
 .number__container a {
 }
 .number__container p {
+}
+
+@media (min-width: 1200px) {
+    
+}
+
+@media (max-width: 1200px) and (min-width: 992px) {
+    
+}
+
+@media (max-width: 992px) and (min-width: 768px) {
+    
+}
+
+@media (max-width: 768px) and (min-width: 576px) {
+    
+}
+
+@media (max-width: 576px) {
+    
 }
