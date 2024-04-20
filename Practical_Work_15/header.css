@@ -7,7 +7,6 @@ header {
     justify-content: space-between;
     align-items: center;
     height: inherit;
-    max-width: 900px;
     margin: 0 auto;
 }
 .logo__container {
@@ -68,15 +67,21 @@ nav ul > li:hover {
 }
 
 @media (min-width: 1200px) {
-    
+    .header-wrapper__container {
+        max-width: 992px;
+    }
 }
 
 @media (max-width: 1200px) and (min-width: 992px) {
-    
+    .header-wrapper__container {
+        max-width: 992px;
+    }
 }
 
 @media (max-width: 992px) and (min-width: 768px) {
-    
+    .header-wrapper__container {
+        max-width: 768px;
+    }
 }
 @media (max-width: 768px) {
     .number__container {
@@ -84,17 +89,29 @@ nav ul > li:hover {
         top: 150px;
         left: 0;
     }
-    nav{
+    nav {
         display: none;
     }
-    .icon-menu{
-
+    .icon-menu {
     }
 }
 @media (max-width: 768px) and (min-width: 576px) {
-    
+    .header-wrapper__container {
+        max-width: 576px;
+    }
+    .number__container {
+        width: 576px;
+        left: calc((100vw - 576px) / 2);
+    }
 }
 
 @media (max-width: 576px) {
-    
+    .header-wrapper__container {
+        max-width: 576px;
+        padding: 0 10px;
+    }
+
+    .number__container {
+        padding: 0 10px;
+    }
 }
