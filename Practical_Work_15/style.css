@@ -4,6 +4,7 @@
 @import url("footer.css");
 @import url("carousel.css");
 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 @media (min-width: 1200px) {
     div[class$="wrapper__container"] {
         max-width: 992px;
@@ -43,4 +44,8 @@
         margin: 0 auto;
         padding: 15px 15px;
     }
+}
+
+*{
+    font-family: "Open Sans", serif;
 }
