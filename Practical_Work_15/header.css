@@ -88,11 +88,13 @@ nav ul > li:hover {
         position: absolute;
         top: 150px;
         left: 0;
+        padding-top: 10px !important;
     }
     nav {
         display: none;
     }
     .icon-menu {
+
     }
 }
 @media (max-width: 768px) and (min-width: 576px) {
