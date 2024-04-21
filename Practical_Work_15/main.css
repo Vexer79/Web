@@ -6,7 +6,7 @@ main {
     display: grid;
     grid-template: 1fr / repeat(3, 1fr);
     column-gap: 5px;
-    padding: 15px 0;
+    padding-top: 15px;
 }
 
 .catalog__container,
@@ -42,11 +42,6 @@ main {
 }
 
 @media (min-width: 1200px) {
-    .main-wrapper__container {
-        width: 992px;
-        margin: 0 auto;
-        padding: 15px 0;
-    }
 }
 
 @media (max-width: 1200px) and (min-width: 992px) {
