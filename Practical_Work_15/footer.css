@@ -1,13 +1,26 @@
 footer {
     background-color: #EF233C;
-    height: 200px;
 }
 
 .info__container{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    padding: 10px 0;
 }
 
 .copyright__container{
     text-align: center;
+}
+
+@media (max-width: 768px) and (min-width: 576px) {
+    .info__container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .info__container {
+        grid-template-columns: 1fr;
+    }
 }
