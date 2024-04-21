@@ -1,15 +1,22 @@
 footer {
-    background-color: #EF233C;
+    background-color: #084c5c;
 }
 
-.info__container{
+footer p,
+footer a,
+footer a:active,
+footer a:visited {
+    color: #84c4d5;
+}
+
+.info__container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 5px;
     padding: 10px 0;
 }
 
-.copyright__container{
+.copyright__container {
     text-align: center;
 }
 
