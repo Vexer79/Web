@@ -11,15 +11,16 @@ main {
 
 .catalog__container,
 .sale__container,
-.map__container{
+.map__container {
     position: relative;
     border: solid 1px black;
     transition: all 0.25s ease;
+    height: 200px;
 }
 
 .catalog__container:hover,
 .sale__container:hover,
-.map__container:hover{
+.map__container:hover {
     box-shadow: 2px 2px 4px #000000;
 }
 
@@ -37,37 +38,36 @@ main {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-.map__container iframe{
+.map__container iframe {
     width: 100%;
-}
-
-@media (min-width: 1200px) {
-}
-
-@media (max-width: 1200px) and (min-width: 992px) {
+    height: 100%;
 }
 
 @media (max-width: 992px) and (min-width: 768px) {
-    .articles__container{
-        grid-template: repeat(2, 1fr)/ repeat(2, 1fr);
+    .articles__container {
+        grid-template: repeat(2, 1fr) / repeat(2, 1fr);
         gap: 5px;
     }
-    .map__container{
+    .map__container {
         grid-column: 1 / 3;
     }
 }
-@media (max-width: 768px) {
-}
 @media (max-width: 768px) and (min-width: 576px) {
-    .articles__container{
-        grid-template: repeat(3, 1fr)/ 1fr;
+    .main-wrapper__container {
+        padding-top: 50px !important;
+    }
+    .articles__container {
+        grid-template: repeat(3, 1fr) / 1fr;
         gap: 5px;
     }
 }
 
 @media (max-width: 576px) {
-    .articles__container{
-        grid-template: repeat(3, 1fr)/ 1fr;
+    .main-wrapper__container {
+        padding-top: 50px !important;
+    }
+    .articles__container {
+        grid-template: repeat(3, 1fr) / 1fr;
         gap: 5px;
     }
 }

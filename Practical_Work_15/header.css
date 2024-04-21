@@ -1,6 +1,6 @@
 header {
     background-color: white;
-    color: #B41944;
+    color: #b41944;
 }
 .header-wrapper__container {
     display: flex;
@@ -15,7 +15,7 @@ header {
 .logo__img {
     width: 120px;
     height: 120px;
-    background-color: #2B2D42;
+    background-color: #2b2d42;
 }
 .logo-label__container {
     display: flex;
@@ -66,16 +66,6 @@ nav ul > li:hover {
 .number__container p {
 }
 
-@media (min-width: 1200px) {
-}
-
-@media (max-width: 1200px) and (min-width: 992px) {
-
-}
-
-@media (max-width: 992px) and (min-width: 768px) {
-    
-}
 @media (max-width: 768px) {
     .number__container {
         position: absolute;
@@ -87,7 +77,6 @@ nav ul > li:hover {
         display: none;
     }
     .icon-menu {
-
     }
 }
 @media (max-width: 768px) and (min-width: 576px) {
@@ -99,6 +88,6 @@ nav ul > li:hover {
 
 @media (max-width: 576px) {
     .number__container {
-        padding: 0 10px;
+        padding: 0 15px;
     }
 }
