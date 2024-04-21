@@ -2,8 +2,47 @@ main {
     background-color: #90c4d4;
 }
 
+.articles__container {
+    display: grid;
+    grid-template: 1fr / repeat(3, 1fr);
+    column-gap: 5px;
+    padding: 15px 0;
+}
+
+.catalog__container,
+.sale__container,
+.map__container{
+    position: relative;
+    border: solid 1px black;
+    transition: all 0.25s ease;
+}
+
+.catalog__container:hover,
+.sale__container:hover,
+.map__container:hover{
+    box-shadow: 2px 2px 4px #000000;
+}
+
+.catalog__container p,
+.sale__container p,
+.map__container p {
+    text-transform: uppercase;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.map__container iframe{
+    width: 100%;
+}
+
 @media (min-width: 1200px) {
-    .main-wrapper__container{
+    .main-wrapper__container {
         width: 992px;
         margin: 0 auto;
         padding: 15px 0;
@@ -14,11 +53,26 @@ main {
 }
 
 @media (max-width: 992px) and (min-width: 768px) {
+    .articles__container{
+        grid-template: repeat(2, 1fr)/ repeat(2, 1fr);
+        gap: 5px;
+    }
+    .map__container{
+        grid-column: 1 / 3;
+    }
 }
 @media (max-width: 768px) {
 }
 @media (max-width: 768px) and (min-width: 576px) {
+    .articles__container{
+        grid-template: repeat(3, 1fr)/ 1fr;
+        gap: 5px;
+    }
 }
 
 @media (max-width: 576px) {
+    .articles__container{
+        grid-template: repeat(3, 1fr)/ 1fr;
+        gap: 5px;
+    }
 }
