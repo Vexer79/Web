@@ -1,6 +1,7 @@
 header {
     padding: 15px 0;
-    background-color: #EDF6F9;
+    background-color: white;
+    color: #B41944;
 }
 .header-wrapper__container {
     display: flex;
@@ -15,7 +16,7 @@ header {
 .logo__img {
     width: 120px;
     height: 120px;
-    background-color: yellow;
+    background-color: #2B2D42;
 }
 .logo-label__container {
     display: flex;
