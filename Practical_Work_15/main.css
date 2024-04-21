@@ -1,4 +1,24 @@
 main {
-    background-color: #90C4D4;
-    height: 1000px;
+    background-color: #90c4d4;
+}
+
+@media (min-width: 1200px) {
+    .main-wrapper__container{
+        width: 992px;
+        margin: 0 auto;
+        padding: 15px 0;
+    }
+}
+
+@media (max-width: 1200px) and (min-width: 992px) {
+}
+
+@media (max-width: 992px) and (min-width: 768px) {
+}
+@media (max-width: 768px) {
+}
+@media (max-width: 768px) and (min-width: 576px) {
+}
+
+@media (max-width: 576px) {
 }
