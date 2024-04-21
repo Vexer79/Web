@@ -41,22 +41,55 @@ nav ul {
 }
 nav ul > li {
     margin: 0 10px;
+    display: flex;
+    width: 50px;
+    height: 50px;
+    background-position: top 0 left 50%;
+    background-size: 70%;
+    background-repeat: no-repeat;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: #186c84;
 }
 nav ul > li:hover {
-    filter: invert(1);
+    background-color: #186c84;
+    color: white;
 }
 
-.catalog__link {
-    background-image: url();
+nav ul > li:first-child {
+    background-image: url("catalog.svg");
 }
-.about__link {
-    background-image: url();
+
+nav ul > li:nth-child(2) {
+    background-image: url("about.svg");
 }
-.awards__link {
-    background-image: url();
+nav ul > li:last-child {
+    background-image: url("awards.svg");
 }
-.number__link {
-    background-image: url();
+
+.catalog__link,
+.catalog__link:active,
+.catalog__link:visited {
+    text-align: center;
+    color: inherit;
+}
+.about__link,
+.about__link:active,
+.about__link:visited {
+    text-align: center;
+    color: inherit;
+}
+.awards__link,
+.awards__link:active,
+.awards__link:visited {
+    text-align: center;
+    color: inherit;
+}
+.number__link,
+.number__link:active,
+.number__link:visited {
+    color: inherit;
+    background: url("phone.svg") no-repeat;
 }
 .number__container {
 }
