@@ -2,3 +2,12 @@ footer {
     background-color: #EF233C;
     height: 200px;
 }
+
+.info__container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.copyright__container{
+    text-align: center;
+}
