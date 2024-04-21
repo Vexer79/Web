@@ -63,7 +63,8 @@ nav ul > li:hover {
 
 .number__container a {
 }
-.number__container p {
+.number__container p::before {
+    content: "*";
 }
 
 @media (max-width: 768px) {
