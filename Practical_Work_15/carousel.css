@@ -12,12 +12,12 @@
     position: relative;
     display: none;
     animation: 0.6s ease-in-out;
-    height: 70vh; /* Set your height */
+    height: 80vh; /* Set your height */
 }
 
 .carousel-item > .carousel-img {
     width: 100%;
-    min-height: 70vh; /* same height */
+    min-height:80vh; /* same height */
     height: auto;
 }
 .carousel-item.carousel-video {
