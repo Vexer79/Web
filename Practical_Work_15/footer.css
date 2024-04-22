@@ -16,6 +16,14 @@ footer a:visited {
     padding: 10px 0;
 }
 
+.info__container p {
+    padding: 5px 0;
+}
+
+.info__container > div p:first-child{
+    font-size: 1.5rem;
+}
+
 .copyright__container {
     text-align: center;
 }
@@ -24,10 +32,30 @@ footer a:visited {
     .info__container {
         grid-template-columns: 1fr;
     }
+
+    .adress__container::before,
+    .adress__container::after{
+        content: '';
+        display: block;
+        margin: 5px auto;
+        width: 70%;
+        padding: 1px 0;
+        background-color: #fff;
+    }
 }
 
 @media (max-width: 576px) {
     .info__container {
         grid-template-columns: 1fr;
+    }
+
+    .adress__container::before,
+    .adress__container::after{
+        content: '';
+        display: block;
+        margin: 5px auto;
+        width: 70%;
+        padding: 1px 0;
+        background-color: #fff;
     }
 }
