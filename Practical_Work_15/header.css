@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+
 header {
     background-color: white;
     color: #b41944;
@@ -15,7 +17,7 @@ header {
 .logo__img {
     width: 120px;
     height: 120px;
-    background-color: #084C5C;
+    background-color: #084c5c;
 }
 .logo-label__container {
     display: flex;
@@ -24,6 +26,9 @@ header {
     padding-left: 10px;
 }
 .name-logo__h1 {
+    font-family: "Noto Sans KR", serif;
+    font-size: 2rem;
+    font-weight: 700;
 }
 .family-logo__container {
 }
@@ -33,8 +38,7 @@ header {
 }
 .nav__container {
     display: flex;
-}
-nav {
+    font-weight: 600;
 }
 nav ul {
     display: flex;
@@ -42,17 +46,19 @@ nav ul {
 nav ul > li {
     margin: 0 10px;
     display: flex;
-    width: 50px;
-    height: 50px;
-    background-position: top 0 left 50%;
-    background-size: 70%;
+    min-height: 60px;
+    background-position: top 5px left 50%;
+    background-size: 35px;
     background-repeat: no-repeat;
     flex-direction: column;
     justify-content: flex-end;
-    color: #084C5C;
+    color: #084c5c;
+    transition: all 0.25s ease;
+    font-size: 1em;
+    padding: 5px;
 }
 nav ul > li:hover {
-    background-color: #084C5C;
+    background-color: #084c5c;
     color: white;
 }
 
@@ -72,26 +78,57 @@ nav ul > li:last-child {
 .catalog__link:visited {
     text-align: center;
     color: inherit;
+    font-weight: inherit;
+    font-size: inherit;
 }
 .about__link,
 .about__link:active,
 .about__link:visited {
     text-align: center;
     color: inherit;
+    font-weight: inherit;
+    font-size: inherit;
 }
 .awards__link,
 .awards__link:active,
 .awards__link:visited {
     text-align: center;
     color: inherit;
+    font-weight: inherit;
+    font-size: inherit;
 }
 .number__link,
 .number__link:active,
 .number__link:visited {
-    color: inherit;
+    display: flex;
+    color: #084c5c;
+    font-size: 1.5rem;
+    line-height: 30px;
+    font-weight: inherit;
+    transition: all 0.25s ease;
+    padding: 5px;
+}
+
+.number__link::before {
+    content: "";
+    align-self: center;
     background: url("phone.svg") no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+}
+
+.number__link:hover {
+    background-color: #084c5c;
+    color: white;
 }
 .number__container {
+    width: fit-content;
+    padding: 5px 0;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
 }
 
 .number__container a {
