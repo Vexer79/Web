@@ -62,7 +62,7 @@ nav ul > li {
     color: #084c5c;
     transition: all 0.25s ease;
     font-size: 1em;
-    padding: 5px;
+    padding: 5px ;
 }
 nav ul > li:hover {
     background-color: #084c5c;
@@ -113,7 +113,7 @@ nav ul > li:last-child {
     line-height: 30px;
     font-weight: inherit;
     transition: all 0.25s ease;
-    padding: 5px;
+    padding: 5px 0 5px 5px;
 }
 
 .number__link::before {
@@ -145,27 +145,10 @@ nav ul > li:last-child {
 }
 
 @media (max-width: 768px) {
+    nav,
     .number__container {
-        position: absolute;
-        top: 150px;
-        left: 0;
-        padding-top: 10px !important;
-    }
-    nav {
         display: none;
     }
     .icon-menu {
-    }
-}
-@media (max-width: 768px) and (min-width: 576px) {
-    .number__container {
-        width: 576px;
-        left: calc((100vw - 576px) / 2);
-    }
-}
-
-@media (max-width: 576px) {
-    .number__container {
-        padding: 0 15px;
     }
 }

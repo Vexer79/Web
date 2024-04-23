@@ -173,3 +173,25 @@
         left: 0;
     }
 }
+
+
+@media (max-width: 768px) and (min-width: 576px) {
+    .carousel-inner > .carousel-item{
+        height: 400px;
+    }
+
+    .carousel-item > .carousel-img {
+        min-height: 400px;
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel-inner > .carousel-item{
+        height: 60vw;
+    }
+
+    .carousel-item > .carousel-img {
+        min-height: 60vw;
+    }
+}
+
