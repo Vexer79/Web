@@ -70,14 +70,14 @@ nav ul > li:hover {
 }
 
 nav ul > li:first-child {
-    background-image: url("catalog.svg");
+    background-image: url("../images/catalog.svg");
 }
 
 nav ul > li:nth-child(2) {
-    background-image: url("about.svg");
+    background-image: url("../images/about.svg");
 }
 nav ul > li:last-child {
-    background-image: url("awards.svg");
+    background-image: url("../images/awards.svg");
 }
 
 .catalog__link,
@@ -119,7 +119,7 @@ nav ul > li:last-child {
 .number__link::before {
     content: "";
     align-self: center;
-    background: url("phone.svg") no-repeat;
+    background: url("../images/phone.svg") no-repeat;
     background-size: cover;
     background-repeat: no-repeat;
     width: 30px;
