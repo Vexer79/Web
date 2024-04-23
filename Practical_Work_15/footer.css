@@ -42,6 +42,9 @@ footer a:visited {
         padding: 1px 0;
         background-color: #fff;
     }
+    .info__container p {
+        text-align: center;
+    }
 }
 
 @media (max-width: 576px) {
@@ -54,7 +57,7 @@ footer a:visited {
         content: '';
         display: block;
         margin: 5px auto;
-        width: 70%;
+        width: 30%;
         padding: 1px 0;
         background-color: #fff;
     }

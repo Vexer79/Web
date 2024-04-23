@@ -29,12 +29,19 @@ header {
     font-family: "Noto Sans KR", serif;
     font-size: 2rem;
     font-weight: 700;
+    max-width: 200px;
+    padding: 10px 0;
 }
 .family-logo__container {
 }
 .family-logo__img {
+    width: 20px;
+    height: 20px;
 }
 .name-family-logo__span {
+    line-height: 20px;
+    color: black;
+    font-weight: 600;
 }
 .nav__container {
     display: flex;
