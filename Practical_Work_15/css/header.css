@@ -89,7 +89,10 @@ nav ul > li:last-child {
 .catalog__link,
 .catalog__link:active,
 .catalog__link:visited {
+    width: 100%;
+    height: 100%;
     text-align: center;
+    padding-top: 77.5%;
     color: inherit;
     font-weight: inherit;
     font-size: inherit;
