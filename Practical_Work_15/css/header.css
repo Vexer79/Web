@@ -32,6 +32,12 @@ header {
     max-width: 200px;
     padding: 10px 0;
 }
+
+.name-logo__h1 a,
+.name-logo__h1 a:active,
+.name-logo__h1 a:visited{
+    color: inherit;
+}
 .family-logo__container {
 }
 .family-logo__img {
