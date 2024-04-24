@@ -38,8 +38,6 @@ header {
 .name-logo__h1 a:visited{
     color: inherit;
 }
-.family-logo__container {
-}
 .family-logo__img {
     width: 20px;
     height: 20px;
@@ -159,10 +157,12 @@ nav ul > li:last-child {
     flex-direction: column;
 }
 
-.number__container a {
-}
 .number__container p::before {
     content: "*";
+}
+
+.main-wrapper__container .number__container{
+    display: none;
 }
 
 @media (max-width: 768px) {
@@ -171,5 +171,15 @@ nav ul > li:last-child {
         display: none;
     }
     .icon-menu {
+    }
+
+    .number__link{
+        width: 100%;
+        background-color: #fff;
+        border: solid 3px black;
+        justify-content: center;
+    }
+    .number__container p{
+        padding: 7px 0;
     }
 }
