@@ -77,11 +77,6 @@ main {
         gap: 5px;
     }
 
-    .main-wrapper__container .number__container{
-        display: flex;
-        align-items: center;
-        width: 100%;
-    }
 }
 
 @media (max-width: 576px) {
@@ -95,9 +90,4 @@ main {
         height: 60vw;
     }
 
-    .main-wrapper__container .number__container{
-        display: flex;
-        align-items: center;
-        width: 100%;
-    }
 }

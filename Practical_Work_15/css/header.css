@@ -173,6 +173,12 @@ nav ul > li:last-child {
     .icon-menu {
     }
 
+    .main-wrapper__container .number__container{
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
     .number__link{
         width: 100%;
         background-color: #fff;
