@@ -102,6 +102,8 @@ nav ul > li:last-child {
 .about__link,
 .about__link:active,
 .about__link:visited {
+    width: 100%;
+    height: 100%;
     text-align: center;
     color: inherit;
     font-weight: inherit;
@@ -113,6 +115,8 @@ nav ul > li:last-child {
 .awards__link,
 .awards__link:active,
 .awards__link:visited {
+    width: 100%;
+    height: 100%;
     text-align: center;
     color: inherit;
     font-weight: inherit;
