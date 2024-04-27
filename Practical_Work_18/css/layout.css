@@ -21,8 +21,7 @@
         padding: 15px 0;
     }
 }
-@media (max-width: 768px) {
-}
+
 @media (max-width: 768px) and (min-width: 576px) {
     div[class$="wrapper__container"] {
         max-width: 576px;
