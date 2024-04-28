@@ -1,0 +1,134 @@
+.body-menu ul > li:first-child{
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .body-menu ul > li:first-child{
+        display: block;
+    }
+    .main__link {
+        height: 100% !important;
+        text-align: center;
+        color: inherit;
+        font-weight: inherit;
+        font-size: inherit;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    .main__link p{
+        display: flex;
+        align-items: center;
+    }
+    .main__link p::before{
+        content: "";
+        display: inline-block;
+        width: 30px;
+        height: 35px;
+        background: url("../images/home.svg") center no-repeat;
+        filter: invert(1);
+        background-size: 100%;
+    }
+
+    .body-menu,
+    .number__container {
+        display: none;
+    }
+
+    .header-wrapper__container {
+        flex-wrap: wrap;
+    }
+
+    .nav__container {
+        width: 100%;
+    }
+
+    .icon-menu {
+        display: block;
+        z-index: 5;
+        position: relative;
+        width: 60px;
+        height: 40px;
+        cursor: pointer;
+        align-self: center;
+    }
+
+    .icon-menu span,
+    .icon-menu::before,
+    .icon-menu::after {
+        left: 0;
+        position: absolute;
+        height: 17.5%;
+        width: 100%;
+        transition: all 0.3s ease 0s;
+        background-color: #084c5c;
+        border-radius: 5px;
+    }
+
+    .icon-menu > {
+        background-color: #084c5c;
+    }
+
+    .icon-menu::before,
+    .icon-menu::after {
+        content: "";
+    }
+
+    .icon-menu::before {
+        top: 0;
+    }
+
+    .icon-menu::after {
+        bottom: 0;
+    }
+
+    .icon-menu span {
+        top: 50%;
+        transform: scale(1) translate(0px, -50%);
+    }
+
+    .icon-menu._active span {
+        transform: scale(0) translate(0px, -50%);
+    }
+
+    .icon-menu._active::before {
+        top: 50%;
+        transform: rotate(-45deg) translate(0px, -70%);
+    }
+
+    .icon-menu._active::after {
+        bottom: 50%;
+        transform: rotate(45deg) translate(0px, 70%);
+    }
+
+    .nav__container {
+        flex-wrap: wrap;
+    }
+
+    .body-menu {
+        width: 100%;
+    }
+
+    .body-menu._active {
+        display: block !important;
+    }
+
+    .body-menu ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .body-menu._active ul > li {
+        padding: 7px 0 !important;
+        display: flex;
+        width: 100%;
+        margin: 0;
+        justify-content: center;
+        align-items: center;
+        background-position: top 50% left 20%;
+    }
+
+    .body-menu._active ul > li a {
+        font-size: 2em;
+    }
+}

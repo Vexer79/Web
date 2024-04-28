@@ -73,11 +73,11 @@ nav ul > li:hover {
     color: white;
 }
 
-nav ul > li:first-child {
+nav ul > li:nth-child(2) {
     background-image: url("../images/catalog.svg");
 }
 
-nav ul > li:nth-child(2) {
+nav ul > li:nth-child(3) {
     background-image: url("../images/about.svg");
 }
 nav ul > li:last-child {
@@ -166,12 +166,6 @@ nav ul > li:last-child {
 }
 
 @media (max-width: 768px) {
-    nav,
-    .number__container {
-        display: none;
-    }
-    .icon-menu {
-    }
 
     .main-wrapper__container .number__container{
         display: flex;
@@ -187,5 +181,9 @@ nav ul > li:last-child {
     }
     .number__container p{
         padding: 7px 0;
+    }
+
+    .logo__img{
+        display: none;
     }
 }
