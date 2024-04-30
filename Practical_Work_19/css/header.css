@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+
+header {
+    background-color: white;
+    color: #b41944;
+}
+.header-wrapper__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: inherit;
+    margin: 0 auto;
+}
+.logo__container {
+    display: flex;
+}
+.logo__img {
+    width: 120px;
+    height: 120px;
+    background-color: #084c5c;
+}
+.logo-label__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10px;
+}
+.name-logo__h1 {
+    font-family: "Noto Sans KR", serif;
+    font-size: 2rem;
+    font-weight: 700;
+    max-width: 200px;
+    padding: 10px 0;
+}
+
+.name-logo__h1 a,
+.name-logo__h1 a:active,
+.name-logo__h1 a:visited{
+    color: inherit;
+}
+.family-logo__img {
+    width: 20px;
+    height: 20px;
+}
+.name-family-logo__span {
+    line-height: 20px;
+    color: black;
+    font-weight: 600;
+}
+.nav__container {
+    display: flex;
+    font-weight: 600;
+}
+nav ul {
+    display: flex;
+}
+nav ul > li {
+    margin: 0 10px;
+    display: flex;
+    min-height: 60px;
+    background-position: top 5px left 50%;
+    background-size: 35px;
+    background-repeat: no-repeat;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: #084c5c;
+    transition: all 0.25s ease;
+    font-size: 1em;
+    padding: 5px ;
+}
+nav ul > li:hover {
+    background-color: #084c5c;
+    color: white;
+}
+
+nav ul > li:nth-child(2) {
+    background-image: url("../images/catalog.svg");
+}
+
+nav ul > li:nth-child(3) {
+    background-image: url("../images/about.svg");
+}
+nav ul > li:last-child {
+    background-image: url("../images/awards.svg");
+}
+
+.catalog__link,
+.catalog__link:active,
+.catalog__link:visited {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.about__link,
+.about__link:active,
+.about__link:visited {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.awards__link,
+.awards__link:active,
+.awards__link:visited {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.number__link,
+.number__link:active,
+.number__link:visited {
+    display: flex;
+    color: #084c5c;
+    font-size: 1.5rem;
+    line-height: 30px;
+    font-weight: inherit;
+    transition: all 0.25s ease;
+    padding: 5px 0 5px 5px;
+}
+
+.number__link::before {
+    content: "";
+    align-self: center;
+    background: url("../images/phone.svg") no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+}
+
+.number__link:hover {
+    background-color: #084c5c;
+    color: white;
+}
+.number__container {
+    width: fit-content;
+    padding: 5px 0;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+.number__container p::before {
+    content: "*";
+}
+
+.main-wrapper__container .number__container{
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+    .main-wrapper__container .number__container{
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    .number__link{
+        width: 100%;
+        background-color: #fff;
+        border: solid 3px black;
+        justify-content: center;
+    }
+    .number__container p{
+        padding: 7px 0;
+    }
+
+    .logo__img{
+        display: none;
+    }
+}
