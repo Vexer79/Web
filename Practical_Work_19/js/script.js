@@ -29,7 +29,7 @@ import carousel from "./carousel.js";
                 },
                 false
             );
-        }, 3000);
+        }, 3750);
     });
     global.Content = Content;
 })(window);
