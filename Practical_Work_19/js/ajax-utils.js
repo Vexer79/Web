@@ -21,11 +21,7 @@
 
     function handleResponse(request, responseHandler, isJSON = true) {
         if (request.readyState == 4 && request.status == 200) {
-            if (isJSON) {
-                responseHandler(JSON.parse(request.responseText));
-            } else {
-                responseHandler(request.responseText);
-            }
+            responseHandler(isJSON ? JSON.parse(request.responseText) : request.responseText);
         }
     }
 
