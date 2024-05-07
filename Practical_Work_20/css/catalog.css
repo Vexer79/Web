@@ -1,0 +1,81 @@
+@import url("../../Practical_Work_2/reset-style.css");
+@import url("header.css");
+@import url("burger.css");
+@import url("footer.css");
+@import url("layout.css");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+* {
+    font-family: "Open Sans", serif;
+}
+
+main {
+    background-color: #90c4d4;
+    min-height: 1000px;
+}
+
+.catalog-header__container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: #084c5c;
+    font-weight: 500;
+}
+
+.catalog-header__container h2 {
+    text-transform: capitalize;
+    font-size: 2em;
+}
+
+.catalog-header__container p {
+    font-size: 1.1em;
+    padding: 10px 0;
+}
+
+.catalog-header__container p::first-letter {
+    text-transform: uppercase;
+}
+
+.catalog__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.catalog-item__container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    transition: all 0.25s ease;
+}
+
+.catalog-item__container:hover {
+    box-shadow: 0px 0px 6px #000000;
+}
+
+.catalog-item__container img {
+    width: 100%;
+    height: 100%;
+}
+
+.catalog-item__container p {
+    text-transform: uppercase;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 576px) {
+    .catalog__container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
