@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "title": "Catalog-1",
+        "img-url": "A"
+    },
+    {
+        "id": 2,
+        "title": "Catalog-2",
+        "img-url": "B"
+    },
+    {
+        "id": 3,
+        "title": "Catalog-3",
+        "img-url": "C"
+    },
+    {
+        "id": 4,
+        "title": "Catalog-4",
+        "img-url": "D"
+    },
+    {
+        "id": 5,
+        "title": "Catalog-5",
+        "img-url": "E"
+    },
+    {
+        "id": 6,
+        "title": "Catalog-6",
+        "img-url": "F"
+    },
+    {
+        "id": 7,
+        "title": "Catalog-7",
+        "img-url": "G"
+    },
+    {
+        "id": 8,
+        "title": "Catalog-8",
+        "img-url": "H"
+    },
+    {
+        "id": 9,
+        "title": "Catalog-9",
+        "img-url": "I"
+    },
+    {
+        "id": 10,
+        "title": "Catalog-10",
+        "img-url": "J"
+    },
+    {
+        "id": 11,
+        "title": "Catalog-11",
+        "img-url": "K"
+    },
+    {
+        "id": 12,
+        "title": "Special",
+        "img-url": "SP"
+    }
+]

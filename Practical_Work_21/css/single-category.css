@@ -1,0 +1,118 @@
+@import url("catalog.css");
+
+.single-category__container {
+    color: #084c5c;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.category-item__container {
+    padding: 5px 0;
+    display: flex;
+    width: 50%;
+}
+.category-img__container {
+    width: 45%;
+}
+.img__container {
+    background: url("../images/catalog/A/A_1.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    aspect-ratio: 16/9;
+    position: relative;
+}
+.item-id__container {
+    position: absolute;
+    right: 2px;
+    bottom: 3px;
+    background-color: #fff;
+    text-align: center;
+    width: 30%;
+    padding: 3px 0;
+    font-weight: 500;
+}
+.price__container {
+    padding-top: 5px;
+    font-weight: 700;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    letter-spacing: -1px;
+}
+.price-main__container {
+    font-size: 1.25em;
+    text-align: center;
+}
+.price-hint__container {
+    font-size: 0.7em;
+    text-align: center;
+    padding: 0 2px;
+}
+.category-content__container {
+    width: 55%;
+    padding: 0 7px;
+}
+.category-title__container {
+    font-size: 2em;
+    font-weight: 600;
+    padding: 3px 0 10px 0;
+}
+.category-description__container {
+    font-size: 1.1em;
+    line-height: 110%;
+    font-style: italic;
+    font-weight: 500;
+}
+@media (max-width: 992px) {
+    .category-item__container {
+        width: 100%;
+    }
+    .price-main__container {
+        font-size: 1.4em;
+    }
+    .price-hint__container {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 992px) and (min-width: 768px) {
+    .category-item__container {
+        padding: 15px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .category-item__container {
+        flex-direction: column;
+    }
+    .category-img__container{
+        align-self: center;
+        width: 50%;
+    }
+    .category-content__container {
+        width: 100%;
+    }
+    .category-title__container,
+    .category-description__container {
+        text-align: center;
+    }
+    .price__container{
+        justify-content: center;
+        padding: 10px 0;
+    }
+    hr {
+        margin: 20px auto;
+        width: 55%;
+        padding: 1px 0;
+        background-color: #084c5c;
+    }
+}
+
+@media (max-width: 576px) {
+    .category-img__container{
+        align-self: center;
+        width: 100%;
+        padding: 25px 0;
+    }
+}
