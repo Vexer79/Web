@@ -8,30 +8,68 @@ import carousel from "./carousel.js";
     const homeHTML = "./snippets/home-snippet.html";
     const contentContainerSelector = ".content__container";
     const catalogLink = document.querySelector(".catalog__link");
-    const catalogHeaderContainerHTML = "./snippets/catalog-header-snippet.html";
-    const catalogContainerHTML = "./snippets/catalog-snippet.html";
-    const catalogContainer = "#content-header";
+    const catalogHeaderContainer = "#content-header";
+
+    const allCategoriesUrl = "data/categories.json";
+    const categoriesTitleHtml = "snippets/categories-title-snippet.html";
+    const categoryHtml = "snippets/category-snippet.html";
 
     catalogLink.addEventListener("click", (event) => {
-        if (!isLoading) {
-            ajaxUtils.sendGetRequest(
-                catalogHeaderContainerHTML,
-                (response) => {
-                    insertHTML(catalogContainer, response);
-                    isLoading = false;
-                },
-                false
-            );
-            ajaxUtils.sendGetRequest(
-                homeHTML,
-                (response) => {
-                    insertHTML(contentContainerSelector, response);
-                },
-                false
-            );
-        }
+        Content.loadCatalogCategories();
     });
 
+    const insertProperty = function (string, propName, propValue) {
+        const propToReplace = `{{${propName}}}`;
+        return string.replace(new RegExp(propToReplace, "g"), propValue);
+    };
+
+    Content.loadCatalogCategories = function () {
+        if (!isLoading) {
+            isLoading = true;
+            showLoading(contentContainerSelector);
+            ajaxUtils.sendGetRequest(allCategoriesUrl, (response) => {
+                buildAndShowCategoriesHTML(response);
+                isLoading = false;
+            });
+        }
+    };
+
+    function buildAndShowCategoriesHTML(categories) {
+        ajaxUtils.sendGetRequest(
+            categoriesTitleHtml,
+            (categoriesTitleHtml) => {
+                ajaxUtils.sendGetRequest(
+                    categoryHtml,
+                    (categoryHtmlTemplate) => {
+                        const { html, categoriesTitle } = buildCategoriesViewHtml(
+                            categories,
+                            categoriesTitleHtml,
+                            categoryHtmlTemplate
+                        );
+                        insertHTML(catalogHeaderContainer, categoriesTitle);
+                        insertHTML(contentContainerSelector, html);
+                    },
+                    false
+                );
+            },
+            false
+        );
+    }
+
+    function buildCategoriesViewHtml(categories, categoriesTitle, categoryHtmlTemplate) {
+        let html = "<div class='main-catalog__container'>";
+        for (const category of categories) {
+            console.log(category);
+            let categoryHtml = categoryHtmlTemplate;
+            categoryHtml = insertProperty(categoryHtml, "short_name", category["img-url"]);
+            categoryHtml = insertProperty(categoryHtml, "name", category.title);
+            html += categoryHtml;
+        }
+        html += "</div>";
+        return { html, categoriesTitle };
+    }
+
+    //Previous practical work
     const insertHTML = (selector, html) => {
         document.querySelector(selector).innerHTML = html;
     };
@@ -52,6 +90,10 @@ import carousel from "./carousel.js";
                 (response) => {
                     insertHTML(contentContainerSelector, response);
                     carousel();
+                    const catalogMain = document.querySelector(".catalog__container");
+                    catalogMain.addEventListener("click", (event) => {
+                        Content.loadCatalogCategories();
+                    });
                 },
                 false
             );
