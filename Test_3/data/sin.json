@@ -1,0 +1,6 @@
+{
+    "id": 2,
+    "name": "Sine",
+    "description": "The sine function, often denoted as sin, is a fundamental trigonometric function in mathematics. It relates the angle of a right-angled triangle to the ratio of the length of the side opposite the angle to the length of the hypotenuse (the longest side of the triangle).",
+    "image_name": "sin_x.png"
+}
