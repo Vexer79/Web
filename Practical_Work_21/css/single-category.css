@@ -1,12 +1,12 @@
 @import url("catalog.css");
 
 .single-category__container {
-    color: #084c5c;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 .category-item__container {
+    color: #084c5c;
     padding: 5px 0;
     display: flex;
     width: 50%;
