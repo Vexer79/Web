@@ -1,0 +1,36 @@
+{
+    "header": {
+        "name": "Special",
+        "description": "some important custom business information here."
+    },
+    "content": [
+        {
+            "id": "SP-1",
+            "title": "Item SP-1",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, fuga.",
+            "img-url": "SP/SP_1",
+            "price": { "max-amount": 5, "max-price": 13.0, "min-price": 11.0 }
+        },
+        {
+            "id": "SP-2",
+            "title": "Item SP-2",
+            "description": "Lorem ipsum dolor sit amet.",
+            "img-url": "SP/SP_2",
+            "price": { "max-price": 13.0 }
+        },
+        {
+            "id": "SP-3",
+            "title": "Item SP-3",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+            "img-url": "SP/SP_3",
+            "price": { "max-amount": 15, "max-price": 83.0, "min-price": 9.0 }
+        },
+        {
+            "id": "SP-4",
+            "title": "Item SP-4",
+            "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic consequatur, sapiente dolore doloribus vero totam harum expedita beatae voluptatem vitae, incidunt dolorem enim quisquam neque eos aut corrupti quaerat! Doloremque!",
+            "img-url": "SP/SP_4",
+            "price": { "max-amount": 5, "max-price": 13.0, "min-price": 11.0 }
+        }
+    ]
+}

@@ -1,0 +1,36 @@
+{
+    "header": {
+        "name": "Category J",
+        "description": "some important custom business information here."
+    },
+    "content": [
+        {
+            "id": "J-1",
+            "title": "Item J-1",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, fuga.",
+            "img-url": "J/J_1",
+            "price": { "max-amount": 5, "max-price": 13.0, "min-price": 11.0 }
+        },
+        {
+            "id": "J-2",
+            "title": "Item J-2",
+            "description": "Lorem ipsum dolor sit amet.",
+            "img-url": "J/J_2",
+            "price": { "max-price": 13.0 }
+        },
+        {
+            "id": "J-3",
+            "title": "Item J-3",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+            "img-url": "J/J_3",
+            "price": { "max-amount": 15, "max-price": 83.0, "min-price": 9.0 }
+        },
+        {
+            "id": "J-4",
+            "title": "Item J-4",
+            "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic consequatur, sapiente dolore doloribus vero totam harum expedita beatae voluptatem vitae, incidunt dolorem enim quisquam neque eos aut corrupti quaerat! Doloremque!",
+            "img-url": "J/J_4",
+            "price": { "max-amount": 5, "max-price": 13.0, "min-price": 11.0 }
+        }
+    ]
+}
